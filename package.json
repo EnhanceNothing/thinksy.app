@@ -1,7 +1,8 @@
 {
   "name": "webbee-js--react-scripts",
-  "author": "maccarian",
-  "email": "hi@maccarianagency.com",
+  "author": "eden",
+  "email": "eden@enhancenothing.com",
+  "homepage": "https://www.thinksy.app/",
   "version": "3.0.0",
   "private": true,
   "scripts": {
