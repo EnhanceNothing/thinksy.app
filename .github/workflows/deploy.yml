@@ -66,3 +66,4 @@ jobs:
           github_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./build
           publish_branch: gh-pages
+          custom_domain: www.thinksy.app
