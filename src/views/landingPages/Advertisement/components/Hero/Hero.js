@@ -54,7 +54,7 @@ const Hero = () => {
                 marginWidth="0"
                 marginHeight="0"
                 style={{ border: 'none', padding: 0, margin: 0, overflow: 'hidden', marginheight: 0, marginWdith: 0 }}
-              />              
+              />
           </Box>
         </Box>
       </Grid>
