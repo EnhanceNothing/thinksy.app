@@ -32,7 +32,7 @@ const Footer = () => (
             <Link
               underline="none"
               component="a"
-              href="/"
+              href="/"//
               color="textPrimary"
               variant={'subtitle2'}
             >
