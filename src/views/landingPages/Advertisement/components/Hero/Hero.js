@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import addIdeaImg from './images/add-idea.png';
+import addIdeaImg from './images/add-idea-tall.png';
 
 
 const Hero = () => {
@@ -44,43 +44,17 @@ const Hero = () => {
                 Be the first to know when we launch - sign up now.
               </Typography>
             </Box>
-            <Box
-              component={'form'}
-              noValidate
-              autoComplete="off"
-              sx={{
-                '& .MuiInputBase-input.MuiOutlinedInput-input': {
-                  bgcolor: 'background.paper',
-                },
-              }}
-            >
               <Box
-                display="flex"
-                flexDirection={{ xs: 'column', sm: 'row' }}
-                alignItems={{ xs: 'stretched', sm: 'flex-start' }}
-              >
-                <Box
-                  flex={'1 1 auto'}
-                  component={TextField}
-                  label="Enter your email"
-                  variant="outlined"
-                  color="primary"
-                  fullWidth
-                  height={54}
-                />
-                <Box
-                  component={Button}
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                  height={54}
-                  marginTop={{ xs: 2, sm: 0 }}
-                  marginLeft={{ sm: 2 }}
-                >
-                  Subscribe
-                </Box>
-              </Box>
-            </Box>
+                component={'iframe'}
+                src="https://webforms.pipedrive.com/f/5Xasadul4Hm9ROGvAYSqZ7DyDcgD2I7bqEZ4kA1A9mmtQOJ71Ogoz8jke0rVWVaXIv"
+                fullWidth
+                height={450}
+                frameBorder="0"
+                scrolling="auto"
+                marginWidth="0"
+                marginHeight="0"
+                style={{ border: 'none', padding: 0, margin: 0, overflow: 'hidden', marginheight: 0, marginWdith: 0 }}
+              />              
           </Box>
         </Box>
       </Grid>
