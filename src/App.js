@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 
 const App = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL + '/'}>
       <Routes />
     </BrowserRouter>
   );
