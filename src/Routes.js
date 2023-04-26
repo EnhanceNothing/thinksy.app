@@ -48,12 +48,8 @@ const Routes = () => {
       <Route
         exact
         path="/thankyou"
-        element={((matchProps) => (
-          <WithLayout
-            {...matchProps}
-            component={ThankYouView}
-            layout={MainLayout}
-          />
+        element={(() => (
+          <ThankYouView />
         ))()}
       />      
       <Route
