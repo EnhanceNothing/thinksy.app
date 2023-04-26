@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Routes as ReactRoutes, Route } from 'react-router-dom';
+import {HashRouter,Routes as ReactRoutes, Route } from 'react-router-dom';
 import WithLayout from 'WithLayout';
 // Available layouts
 import {
@@ -22,53 +22,51 @@ import {
 
 const Routes = () => {
   return (
-    <HashRouter basename="/thinksy">
-      <ReactRoutes>
-        <Route
-          exact
-          path="/"
-          element={((matchProps) => (
-            <WithLayout
-              {...matchProps}
-              component={AdvertisementView}
-              layout={MainLayout}
-            />
-          ))()}
-        />
-        <Route
-          exact
-          path="/about"
-          element={((matchProps) => (
-            <WithLayout
-              {...matchProps}
-              component={AboutView}
-              layout={MainLayout}
-            />
-          ))()}
-        />
-        <Route
-          exact
-          path="/thankyou"
-          element={((matchProps) => (
-            <WithLayout
-              {...matchProps}
-              component={ThankYouView}
-              layout={MainLayout}
-            />
-          ))()}
-        />      
-        <Route
-          path="*"
-          element={((matchProps) => (
-            <WithLayout
-              {...matchProps}
-              component={NotFoundView}
-              layout={MainLayout}
-            />
-          ))()}
-        />
-      </ReactRoutes>
-    </HashRouter>
+    <ReactRoutes>
+      <Route
+        exact
+        path="/"
+        element={((matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={AdvertisementView}
+            layout={MainLayout}
+          />
+        ))()}
+      />
+      <Route
+        exact
+        path="/about"
+        element={((matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={AboutView}
+            layout={MainLayout}
+          />
+        ))()}
+      />
+      <Route
+        exact
+        path="/thankyou"
+        element={((matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={ThankYouView}
+            layout={MainLayout}
+          />
+        ))()}
+      />      
+      <Route
+        path="*"
+        element={((matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={NotFoundView}
+            layout={MainLayout}
+          />
+        ))()}
+      />
+    </ReactRoutes>
   );
 };
 
