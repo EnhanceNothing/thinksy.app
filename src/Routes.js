@@ -37,6 +37,7 @@ import {
   Privacy as PrivacyView,
   ComingSoon as ComingSoonView,
   MaintenanceMode as MaintenanceModeView,
+  ThankYou as ThankYouView,
   Cover as CoverView,
   NotFound as NotFoundView,
 } from './views/supportingPages';
@@ -87,6 +88,17 @@ const Routes = () => {
           <WithLayout
             {...matchProps}
             component={AboutView}
+            layout={MainLayout}
+          />
+        ))()}
+      />
+      <Route
+        exact
+        path="/thankyou"
+        element={((matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={ThankYouView}
             layout={MainLayout}
           />
         ))()}

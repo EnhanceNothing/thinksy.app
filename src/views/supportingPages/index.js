@@ -8,5 +8,6 @@ export { default as Faq } from './Faq';
 export { default as Privacy } from './Privacy';
 export { default as ComingSoon } from './ComingSoon';
 export { default as MaintenanceMode } from './MaintenanceMode';
+export { default as ThankYou } from './ThankYou';
 export { default as Cover } from './Cover';
 export { default as NotFound } from './NotFound';
