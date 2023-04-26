@@ -11,6 +11,9 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedinIcon from '@mui/icons-material/LinkedIn';
+import edenImg from './images/eden.jpg';
+import calliImg from './images/calli.jpg';
 
 const Team = () => {
   const theme = useTheme();
@@ -28,47 +31,34 @@ const Team = () => {
         >
           Our team
         </Typography>
-        <Box
-          component={Typography}
-          fontWeight={700}
-          variant={'h3'}
-          align={'center'}
-        >
-          Trust the professionals
-        </Box>
       </Box>
       <Grid container spacing={2}>
-        {[
+        {[    
           {
-            name: 'Chary Smith',
-            title: 'SEO at Comoti',
-            avatar: 'https://assets.maccarianagency.com/avatars/img3.jpg',
-            about:
-              'I am an ambitious workaholic, but apart from that, pretty simple person.',
+            name: 'Calli',
+            title: 'Co-founder & CEO',
+            avatar: calliImg,
+            linkedin: 'https://www.linkedin.com/in/calli-fuchigami-582a9456/',
+            twitter :'https://twitter.com/callifuch',
+            producthunt: 'https://www.producthunt.com/@calli_fuchigami',
+            about: 'Calli has spent her career as a Finance Manager working with game studios, startups and small businesses keeping money operations efficient and organized. She is definitely NOT type-A',
           },
           {
-            name: 'Clara Bertoletti',
-            title: 'Junior Designer',
-            avatar: 'https://assets.maccarianagency.com/avatars/img4.jpg',
-            about:
-              'I am an ambitious workaholic, but apart from that, pretty simple person.',
-          },
-          {
-            name: 'Jhon Anderson',
-            title: 'Senior Frontend Developer',
-            avatar: 'https://assets.maccarianagency.com/avatars/img5.jpg',
-            about:
-              'I am an ambitious workaholic, but apart from that, pretty simple person.',
-          },
-          {
-            name: 'Chary Smith',
-            title: 'SEO at Comoti',
-            avatar: 'https://assets.maccarianagency.com/avatars/img6.jpg',
-            about:
-              'I am an ambitious workaholic, but apart from that, pretty simple person.',
-          },
+            name: 'Eden',
+            title: 'Co-founder & CTO',
+            avatar: edenImg,
+            twitter: 'https://twitter.com/EntreEden',
+            github: 'https://github.com/edeng',
+            linkedin: 'https://www.linkedin.com/in/edenghirmai/',
+            producthunt: 'https://www.producthunt.com/@entreeden',
+            about: 'Eden is a Staff Engineer at Slack and an Ex-Google engineer. He\'s currently building software and a chicken coop for his backyard.',
+          },        
         ].map((item, i) => (
-          <Grid item xs={12} sm={6} md={3} key={i}>
+          <Grid item xs={12} sm={6} md={3} key={i} sx={{
+            marginLeft: i === 0 ? 'auto' : undefined,
+            marginRight: i === 1 ? 'auto' : undefined,
+          }}>
+
             <Box
               component={Card}
               borderRadius={3}
@@ -94,23 +84,40 @@ const Team = () => {
                     {item.about}
                   </Typography>
                   <Box marginTop={4}>
-                    <IconButton
-                      size={'small'}
-                      sx={{
-                        marginRight: 1,
-                        color: colors.blueGrey[200],
-                      }}
-                    >
-                      <GitHubIcon />
-                    </IconButton>
-                    <IconButton
-                      size={'small'}
-                      sx={{
-                        color: colors.blueGrey[200],
-                      }}
-                    >
-                      <TwitterIcon />
-                    </IconButton>
+                  {item.github && (
+                      <IconButton
+                        onClick={() => window.open(item.github)}
+                        size={'small'}
+                        sx={{
+                          marginRight: 1,
+                          color: colors.blueGrey[200],
+                        }}
+                      >
+                        <GitHubIcon />
+                      </IconButton>
+                    )}
+                    {item.twitter && (
+                      <IconButton
+                        onClick={() => window.open(item.twitter)}
+                        size={'small'}
+                        sx={{
+                          color: colors.blueGrey[200],
+                        }}
+                      >
+                        <TwitterIcon />
+                      </IconButton>
+                    )}
+                    {item.linkedin && (
+                      <IconButton
+                        onClick={() => window.open(item.linkedin)}
+                        size={'small'}
+                        sx={{
+                          color: colors.blueGrey[200],
+                        }}
+                      >
+                        <LinkedinIcon />
+                      </IconButton>
+                    )}                    
                   </Box>
                 </Box>
               </CardContent>

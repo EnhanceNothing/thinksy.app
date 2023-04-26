@@ -124,6 +124,23 @@ const Topbar = ({
             )}
           </IconButton>
         </Box>
+        <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
+          <Box>
+            <Link underline="none" component="a" href="/" color="textPrimary">
+              Home
+            </Link>
+          </Box>
+          <Box marginX={2}>
+            <Link
+              underline="none"
+              component="a"
+              href="/about"
+              color="textPrimary"
+            >
+              About
+            </Link>
+          </Box>
+        </Box>        
       </Box>
     </Box>
   );

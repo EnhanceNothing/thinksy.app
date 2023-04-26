@@ -27,6 +27,30 @@ const Footer = () => (
         >
           <WebbeeLogo height={'100%'} width={'100%'} />
         </Box>
+        <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
+          <Box marginTop={1} marginRight={2}>
+            <Link
+              underline="none"
+              component="a"
+              href="/"
+              color="textPrimary"
+              variant={'subtitle2'}
+            >
+              Home
+            </Link>
+          </Box>
+          <Box marginTop={1} marginRight={2}>
+            <Link
+              underline="none"
+              component="a"
+              href="/about"
+              color="textPrimary"
+              variant={'subtitle2'}
+            >
+              About
+            </Link>
+          </Box>
+        </Box>        
       </Box>
     </Grid>
     <Grid item xs={12}>

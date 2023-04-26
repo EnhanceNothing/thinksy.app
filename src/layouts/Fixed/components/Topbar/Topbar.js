@@ -129,6 +129,9 @@ const Topbar = ({
             <Link underline="none" component="a" href="/" color="textPrimary">
               Home
             </Link>
+            <Link underline="none" component="a" href="/about" color="textPrimary">
+              About
+            </Link>            
           </Box>
         </Box>
       </Box>

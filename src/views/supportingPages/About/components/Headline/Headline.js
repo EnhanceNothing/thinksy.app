@@ -45,19 +45,18 @@ const Headline = () => {
               fontWeight: 700,
             }}
           >
-            We take you by hand on each
-            <br />
-            step of the process
+            Your ideas can become reality.
           </Typography>
         </Box>
         <Box marginBottom={4}>
           <Typography variant="h6" align={'center'} color={'textSecondary'}>
-            As experts in both design & development, we help you go through the
-            complete process. From your new website idea, to design,
-            development, launch and scale!
+          We're on a mission to make idea management easy for everyone.
+          Our platform is designed to streamline the brainstorming process and remove any roadblocks that may get in the way of bringing your ideas to life.
+          Whether you're an individual with a creative vision or a team working on a big project, we're here to guide you every step of the way.
+          Let us help you turn your ideas into reality.
           </Typography>
         </Box>
-        <Box display="flex" justifyContent={'center'}>
+        {/* <Box display="flex" justifyContent={'center'}>
           <Box
             component={Button}
             variant="contained"
@@ -83,7 +82,7 @@ const Headline = () => {
           >
             Contact us
           </Box>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );

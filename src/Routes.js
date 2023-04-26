@@ -81,6 +81,17 @@ const Routes = () => {
         ))()}
       />
       <Route
+        exact
+        path="/about"
+        element={((matchProps) => (
+          <WithLayout
+            {...matchProps}
+            component={AboutView}
+            layout={MainLayout}
+          />
+        ))()}
+      />      
+      <Route
         path="*"
         element={((matchProps) => (
           <WithLayout

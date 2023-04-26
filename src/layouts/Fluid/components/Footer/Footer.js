@@ -38,6 +38,17 @@ const Footer = () => (
             >
               Home
             </Link>
+            <Box marginTop={1} marginRight={2}>
+            <Link
+              underline="none"
+              component="a"
+              href="/about"
+              color="textPrimary"
+              variant={'subtitle2'}
+            >
+              About
+            </Link>
+          </Box>            
           </Box>
         </Box>
       </Box>

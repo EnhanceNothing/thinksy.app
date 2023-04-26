@@ -10,21 +10,6 @@ const About = () => {
       <Container>
         <Headline />
       </Container>
-      <Container paddingY={'0 !important'}>
-        <Gallery />
-      </Container>
-      <Container maxWidth={'800px !important'} paddingBottom={'0 !important'}>
-        <Numbers />
-        <Container>
-          <Divider />
-        </Container>
-      </Container>
-      <Container paddingY={'0 !important'}>
-        <Story />
-        <Container>
-          <Divider />
-        </Container>
-      </Container>
       <Container paddingTop={'0 !important'}>
         <Team />
       </Container>

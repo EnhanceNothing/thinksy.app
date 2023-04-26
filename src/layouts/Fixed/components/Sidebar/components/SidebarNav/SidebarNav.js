@@ -71,18 +71,6 @@ const SidebarNav = ({ pages, onClose }) => {
           Browse pages
         </Button>
       </Box>
-      <Box marginTop={1}>
-        <Button
-          variant="contained"
-          color="primary"
-          fullWidth
-          component="a"
-          target="blank"
-          href="https://material-ui.com/store/items/webbee-landing-page/"
-        >
-          Purchase now
-        </Button>
-      </Box>
     </Box>
   );
 };
