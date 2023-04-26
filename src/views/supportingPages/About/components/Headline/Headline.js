@@ -50,10 +50,11 @@ const Headline = () => {
         </Box>
         <Box marginBottom={4}>
           <Typography variant="h6" align={'center'} color={'textSecondary'}>
-          We're on a mission to make idea management easy for everyone.
-          Our platform is designed to streamline the brainstorming process and remove any roadblocks that may get in the way of bringing your ideas to life.
-          Whether you're an individual with a creative vision or a team working on a big project, we're here to guide you every step of the way.
-          Let us help you turn your ideas into reality.
+          At Thinksy, we're passionate about empowering dreamers and innovators like you. Our mission is to simplify idea management and turn the brainstorming process into a delightful, seamless experience. We've crafted our platform to eliminate obstacles and unleash your creative potential.
+
+          No matter if you're an inspired individual or a collaborative team tackling ambitious projects, we're by your side every step of the journey. At Thinksy, we're dedicated to transforming your concepts into tangible realities.
+
+          Join us in our pursuit to make idea management a breeze, and let's bring your brilliant ideas to life together.
           </Typography>
         </Box>
         {/* <Box display="flex" justifyContent={'center'}>
