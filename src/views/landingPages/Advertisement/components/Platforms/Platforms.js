@@ -50,7 +50,7 @@ const Platforms = () => {
           It's almost too easy
         </Box>
       </Box>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} marginBottom={4}>
         {[
           {
             title: 'AI Analysis',
@@ -111,6 +111,47 @@ const Platforms = () => {
           </Grid>
         ))}
       </Grid>
+      <Typography
+          sx={{
+            textTransform: 'uppercase',
+            fontWeight: 'medium',
+          }}
+          gutterBottom
+          color={'secondary'}
+          align={'center'}
+        >
+          Sharing is caring
+        </Typography>      
+      <Box marginBottom={4}>
+          <Box
+            component={Typography}
+            fontWeight={700}
+            variant={'h3'}
+            align={'center'}
+          >
+            We build in public too
+          </Box>
+
+          <Box
+                component={'iframe'}
+                src="https://feed.mmntm.build/thinksy/embed?isAutoConfig=true"
+                fullWidth
+                height={450}
+                frameBorder="0"
+                scrolling="auto"
+                marginWidth="0"
+                marginHeight="0"
+                style={{
+                  border: 'none',
+                  padding: 0,
+                  margin: 0,
+                  overflow: 'hidden',
+                  marginheight: 0,
+                  marginWdith: 0,
+                  width: '100%' // make sure the iframe takes up the full width of the Box component
+                }}
+          />
+      </Box>      
     </Box>
   );
 };
