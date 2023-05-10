@@ -41,7 +41,7 @@ const Team = () => {
             linkedin: 'https://www.linkedin.com/in/calli-fuchigami-582a9456/',
             twitter :'https://twitter.com/callifuch',
             producthunt: 'https://www.producthunt.com/@calli_fuchigami',
-            about: 'Calli has spent her career as a Finance Manager working with game studios, startups and small businesses keeping money operations efficient and organized. She is definitely NOT type-A',
+            about: 'Calli has spent her career as a Finance Manager working with game studios, startups and small businesses keeping money operations efficient and organized.\nShe is definitely NOT type-A',
           },
           {
             name: 'Eden',
@@ -51,14 +51,13 @@ const Team = () => {
             github: 'https://github.com/edeng',
             linkedin: 'https://www.linkedin.com/in/edenghirmai/',
             producthunt: 'https://www.producthunt.com/@entreeden',
-            about: 'Eden is a Staff Engineer at Slack and an Ex-Google engineer. He\'s currently building software and a chicken coop for his backyard.',
+            about: 'Eden is a Staff Engineer at Slack and an Ex-Google engineer.\nHe\'s currently building software and a chicken coop for his backyard.',
           },        
         ].map((item, i) => (
-          <Grid item xs={12} sm={6} md={3} key={i} sx={{
+          <Grid item xs={12} sm={24} md={12} key={i} sx={{
             marginLeft: i === 0 ? 'auto' : undefined,
             marginRight: i === 1 ? 'auto' : undefined,
           }}>
-
             <Box
               component={Card}
               borderRadius={3}
@@ -69,22 +68,30 @@ const Team = () => {
                 '&:hover': {
                   transform: `translateY(-${theme.spacing(1 / 2)})`,
                 },
+                display: 'flex',
+                flexDirection: {xs: 'column', md: 'row'},
+                alignItems: {xs: 'center', md: 'stretch'},
               }}
             >
+              <Box
+                component={Avatar}
+                src={item.avatar}
+                height={160}
+                width={160}
+                sx={{
+                  marginRight: {xs: 0, md: theme.spacing(2)},
+                  marginLeft: {xs: 0, md: theme.spacing(2)},
+                  alignSelf: {xs: 'center', md: 'stretch'},
+                }}
+              />
               <CardContent>
-                <Box
-                  component={Avatar}
-                  src={item.avatar}
-                  height={80}
-                  width={80}
-                />
-                <Box marginTop={4}>
+                <Box>
                   <ListItemText primary={item.name} secondary={item.title} />
-                  <Typography variant={'subtitle2'} color={'textSecondary'}>
+                  <Typography variant={'subtitle2'} color={'textSecondary'} sx={{ whiteSpace: 'pre-wrap' }}>
                     {item.about}
                   </Typography>
                   <Box marginTop={4}>
-                  {item.github && (
+                    {item.github && (
                       <IconButton
                         onClick={() => window.open(item.github)}
                         size={'small'}
@@ -123,6 +130,7 @@ const Team = () => {
               </CardContent>
             </Box>
           </Grid>
+
         ))}
       </Grid>
     </Box>
