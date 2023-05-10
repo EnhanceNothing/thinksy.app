@@ -6,8 +6,9 @@ import Container from 'common/Container';
 import {
   Hero,
   Benefits,
-  ReviewSection,
+  Headline,
   Platforms,
+  Team,
   Pricing,
 } from './components';
 
@@ -45,18 +46,13 @@ const Advertisement = ({ themeMode }) => {
       </Box>
       <Container>
         <Platforms />
-      </Container>      
-      {/* <Container>
-        <Benefits themeMode={themeMode} />
       </Container>
       <Container>
-        <ReviewSection />
+        <Headline />
       </Container>
-      <Box bgcolor={theme.palette.alternate.main}>
-        <Container>
-          <Pricing />
-        </Container>
-      </Box> */}
+      <Container paddingTop={'0 !important'}>
+        <Team />
+      </Container>          
     </Box>
   );
 };

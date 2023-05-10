@@ -120,7 +120,7 @@ const Platforms = () => {
           color={'secondary'}
           align={'center'}
         >
-          Sharing is caring
+          Join our journey
         </Typography>      
       <Box marginBottom={4}>
           <Box

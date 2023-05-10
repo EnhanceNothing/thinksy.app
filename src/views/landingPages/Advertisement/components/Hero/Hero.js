@@ -8,7 +8,6 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import addIdeaImg from './images/add-idea-tall.png';
 
-
 const Hero = () => {
   const theme = useTheme();
 
@@ -26,12 +25,12 @@ const Hero = () => {
               color="textPrimary"
               sx={{ fontWeight: 700 }}
             >
-              Idea management made easy
+              Don’t lose another good idea
             </Typography>
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="textSecondary">
-              A smarter way to manage your ideas: Save time and effort with our intuitive idea management platform.
+              Thinksy saves & organizes your ideas directly in Slack so you don't have to.
             </Typography>
           </Box>
           <Box
@@ -41,7 +40,7 @@ const Hero = () => {
           >
             <Box marginBottom={2}>
               <Typography variant="body1" component="p">
-                Be the first to know when we launch - sign up now.
+                Sign up to get early access
               </Typography>
             </Box>
               <Box
