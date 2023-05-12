@@ -53,7 +53,7 @@ const Platforms = () => {
       <Grid container spacing={2} marginBottom={4}>
         {[
           {
-            title: 'AI Analysis',
+            title: 'Summarize Automatically',
             subtitle:
               'Use AI to quickly get a summary of the quickiest wins you can get from your team\'s ideas.',
             icon:

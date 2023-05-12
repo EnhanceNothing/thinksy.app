@@ -84,7 +84,7 @@ const Hero = () => {
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="textSecondary">
-              Thinksy saves & organizes your ideas directly in Slack so you don't have to.
+              Thinksy saves & organizes your ideas directly in Slack so you don't have to
             </Typography>
           </Box>
           <Box
@@ -97,11 +97,6 @@ const Hero = () => {
             flexDirection={'column'}
             justifyContent={'center'}
           >
-            <Box marginBottom={2}>
-              <Typography variant="body1" component="p">
-                Sign up to get early access
-              </Typography>
-            </Box>
             {isSubmitted && (
                 <Box marginBottom={2}>
                   <Typography variant="body2" color="success.main">
@@ -143,14 +138,15 @@ const Hero = () => {
                   component={Button}
                   variant="contained"
                   color="primary"
-                  size="large"
+                  // size="large"
+                  width={'30%'}
                   height={54}
                   marginTop={{ xs: 2, sm: 0 }}
                   marginLeft={{ sm: 2 }}
                   disabled={formik.isSubmitting}
                   type="submit"
                 >
-                  Subscribe
+                  Get early access
                 </Box>
               </Box>
             </Box>
