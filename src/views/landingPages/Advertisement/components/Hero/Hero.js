@@ -9,6 +9,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import addIdeaImg from './images/add-idea-mock.png';
+import demoVideo from './images/demo-5.webm';
 import axios from 'axios'; 
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
@@ -64,6 +65,69 @@ const Hero = () => {
   });
 
   const theme = useTheme();
+
+  const GridItemVideoBlock = () => {
+    return (
+      <Box maxHeight={300} position={'relative'}>
+        {/* <Box
+          component={'img'}
+          maxHeight={300}
+          height={'100%'}
+          width={'100%'}
+          src={'https://assets.maccarianagency.com/backgrounds/img2.jpg'}
+          alt="..."
+          loading="lazy"
+          boxShadow={4}
+          borderRadius={1.5}
+          sx={{
+            objectFit: 'cover',
+          }}
+        /> */}
+
+        <Box
+        component={'video'}
+        maxHeight={300}
+        height={'100%'}
+        width={'100%'}
+        src={demoVideo}
+        alt="..."
+        loading="lazy"
+        boxShadow={4}
+        borderRadius={1.5}
+        sx={{
+          objectFit: 'cover',
+        }}
+        controls
+      />        
+      
+        {/* <Box
+          position={'absolute'}
+          top={'50%'}
+          left={'50%'}
+          color={theme.palette.primary.main}
+          zIndex={2}
+          sx={{
+            transform: 'translate(-50%, -50%)',
+            cursor: 'pointer',
+          }}
+        >
+          <svg
+            width={80}
+            height={80}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </Box> */}
+      </Box>
+    );
+  };  
 
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -163,7 +227,9 @@ const Hero = () => {
         md={5}
         data-aos={isMd ? 'fade-left' : 'fade-up'}
       >
-        <Box
+
+      <GridItemVideoBlock />
+        {/* <Box
           component={'img'}
           height={'100%'}
           width={'100%'}
@@ -173,7 +239,7 @@ const Hero = () => {
           boxShadow={3}
           borderRadius={4}
           maxWidth={800}
-        />
+        /> */}
       </Grid>
     </Grid>
   );

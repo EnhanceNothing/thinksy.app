@@ -13,6 +13,7 @@ import CardActions from '@mui/material/CardActions';
 import aiImg from './images/ai.png';
 import tagsImg from './images/tags.png';
 import voteImg from './images/vote.png';
+import summaryImg from './images/summary.png';
 import { imageListItemBarClasses } from '@mui/material';
 
 const Platforms = () => {
@@ -57,7 +58,7 @@ const Platforms = () => {
             subtitle:
               'Use AI to quickly get a summary of the quickiest wins you can get from your team\'s ideas.',
             icon:
-              aiImg,
+              summaryImg,
           },
           {
             title: 'Organize by Tags',
@@ -73,7 +74,7 @@ const Platforms = () => {
             icon: voteImg,
           },
         ].map((item, i) => (
-          <Grid item xs={12} md={4} key={i}>
+          <Grid item xs={12} md={12} key={i}>
               <Box
                 component={Card}
                 width={'100%'}
@@ -90,13 +91,13 @@ const Platforms = () => {
                 >
                   <Box
                     component={'img'}
-                    maxWidth={400}
+                    maxWidth={600}
                     marginBottom={2}
                     src={item.icon}
                   />
                   <Box
                     component={Typography}
-                    variant={'h6'}
+                    variant={'h3'}
                     gutterBottom
                     fontWeight={500}
                     align={'center'}

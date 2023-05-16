@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { useFormik } from 'formik';
+import * as yup from 'yup';
 import { useTheme } from '@mui/material/styles';
 import { colors } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -10,13 +12,68 @@ import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedinIcon from '@mui/icons-material/LinkedIn';
 import edenImg from './images/eden.jpg';
 import calliImg from './images/calli.jpg';
+import axios from 'axios'; 
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+const validationSchema = yup.object({
+  email: yup
+    .string('Enter your email')
+    .trim()
+    .email('Enter a valid email')
+    .required('Email is required'),
+});
+
 
 const Team = () => {
   const theme = useTheme();
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+    },
+    validationSchema: validationSchema,
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
+      try {
+        const response = await axios.post(
+          'https://api.airtable.com/v0/appvKEFZdedhZN1cg/Thinksy.app%20Waitlist%20SIgnups',
+          {
+            fields: {
+              "Email": values.email,
+              "Tag": [
+                "Warm lead"
+              ]            
+            },
+          },
+          {
+            // yeah i know this is a bad idea
+            // was too lazy to switch out of github pages
+            // dont judge me
+            headers: {
+              'Authorization': `Bearer patE9zJ6XHefEUOxW.d21636b22bc6801c38c552d7c8f5c156ddff0594d1fa563cf71066fb1e0120ab`,
+              'Content-Type': 'application/json',
+            },
+          },
+        );
+        
+        console.log(response.data);
+        resetForm();
+        setIsSubmitted(true);
+        // setTimeout(() => setIsSubmitted(false), 3000); // remove the success message after 3 seconds        
+      } catch (error) {
+        console.error('Error adding record to Airtable:', error);
+      }
+
+      setSubmitting(false);
+    },
+  });  
   return (
     <Box>
       <Box marginBottom={4}>
@@ -133,6 +190,81 @@ const Team = () => {
 
         ))}
       </Grid>
+      <Box
+            component={Typography}
+            fontWeight={700}
+            variant={'h3'}
+            padding={5}
+            align={'center'}
+          >
+            Don't lose another good idea
+          </Box>      
+      <Box
+            display="flex"
+            flexDirection={'column'}
+            justifyContent={'center'}
+          >
+            <Box
+            display="flex"
+            flexDirection={'column'}
+            justifyContent={'center'}
+          >
+            {isSubmitted && (
+                <Box marginBottom={2}>
+                  <Typography variant="body2" color="success.main">
+                    <CheckCircleIcon /> Successfully subscribed!
+                  </Typography>
+                </Box>
+              )}            
+            <Box
+              component={'form'}
+              noValidate
+              autoComplete="off"
+              onSubmit={formik.handleSubmit}
+              sx={{
+                '& .MuiInputBase-input.MuiOutlinedInput-input': {
+                  bgcolor: 'background.paper',
+                },
+              }}
+            >
+              <Box
+                display="flex"
+                flexDirection={{ xs: 'column', sm: 'row' }}
+                alignItems={{ xs: 'stretched', sm: 'flex-start' }}
+              >
+                <Box
+                  flex={'1 1 auto'}
+                  component={TextField}
+                  label="Enter your email"
+                  variant="outlined"
+                  color="primary"
+                  fullWidth
+                  height={54}
+                  name="email"
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  error={formik.touched.email && Boolean(formik.errors.email)}
+                  helperText={formik.touched.email && formik.errors.email}                  
+                />
+                <Box
+                  component={Button}
+                  variant="contained"
+                  color="primary"
+                  // size="large"
+                  width={'30%'}
+                  height={54}
+                  marginTop={{ xs: 2, sm: 0 }}
+                  marginLeft={{ sm: 2 }}
+                  disabled={formik.isSubmitting}
+                  type="submit"
+                >
+                  Get early access
+                </Box>
+              </Box>
+            </Box>
+          </Box>            
+          </Box>
+    
     </Box>
   );
 };
