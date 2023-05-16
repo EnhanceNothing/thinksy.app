@@ -135,7 +135,7 @@ const Hero = () => {
 
   return (
     <Grid container spacing={4}>
-      <Grid item xs={12} md={7}>
+      <Grid item xs={12} md={6}>
         <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
           <Box marginBottom={2}>
             <Typography
@@ -203,7 +203,7 @@ const Hero = () => {
                   variant="contained"
                   color="primary"
                   // size="large"
-                  width={'30%'}
+                  width={'35%'}
                   height={54}
                   marginTop={{ xs: 2, sm: 0 }}
                   marginLeft={{ sm: 2 }}
@@ -224,7 +224,7 @@ const Hero = () => {
         alignItems={'center'}
         justifyContent={'center'}
         xs={12}
-        md={5}
+        md={6}
         data-aos={isMd ? 'fade-left' : 'fade-up'}
       >
 
