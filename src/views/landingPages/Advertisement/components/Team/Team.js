@@ -251,7 +251,6 @@ const Team = () => {
                   variant="contained"
                   color="primary"
                   // size="large"
-                  width={'30%'}
                   height={54}
                   marginTop={{ xs: 2, sm: 0 }}
                   marginLeft={{ sm: 2 }}
