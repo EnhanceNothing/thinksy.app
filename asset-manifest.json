@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.50b0bc5a.css",
-    "main.js": "/static/js/main.066a70c0.js",
+    "main.js": "/static/js/main.1641791a.js",
     "static/js/522.5ca4d995.chunk.js": "/static/js/522.5ca4d995.chunk.js",
     "static/media/eden.jpg": "/static/media/eden.14c2a37b0fa3e80eb15f.jpg",
     "static/media/demo-5.mp4": "/static/media/demo-5.90f652e0fa07c29608eb.mp4",
@@ -10,8 +10,8 @@
     "static/media/vote.png": "/static/media/vote.87b24a7cb46e0c05bccf.png",
     "static/media/add-idea-mock.png": "/static/media/add-idea-mock.3596e7c6a6a91bff52ac.png",
     "static/media/summary.png": "/static/media/summary.f528f76ea94e8d104ceb.png",
-    "static/media/icon.svg": "/static/media/icon.8ddd40a0eeaafae681704bcd968bd5a5.svg",
     "static/media/yay-frog-blep.gif": "/static/media/yay-frog-blep.d2c2d0716a770f46d09c.gif",
+    "static/media/icon-text-2.svg": "/static/media/icon-text-2.a5a756bf334674b5c207e8ce2a5b2a57.svg",
     "index.html": "/index.html",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -20,6 +20,6 @@
   },
   "entrypoints": [
     "static/css/main.50b0bc5a.css",
-    "static/js/main.066a70c0.js"
+    "static/js/main.1641791a.js"
   ]
 }
