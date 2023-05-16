@@ -98,7 +98,7 @@ const Hero = () => {
           objectFit: 'cover',
         }}
         controls
-        autoplay
+        autoPlay
         muted  
         loop      
         playsInline        
