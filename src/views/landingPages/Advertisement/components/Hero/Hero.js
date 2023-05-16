@@ -9,7 +9,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import addIdeaImg from './images/add-idea-mock.png';
-import demoVideo from './images/demo-5.webm';
+import demoVideo from './images/demo-5.mp4';
 import axios from 'axios'; 
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
