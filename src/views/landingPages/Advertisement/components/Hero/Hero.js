@@ -207,7 +207,6 @@ const Hero = () => {
                   variant="contained"
                   color="primary"
                   // size="large"
-                  width={'35%'}
                   height={54}
                   marginTop={{ xs: 2, sm: 0 }}
                   marginLeft={{ sm: 2 }}
@@ -215,7 +214,7 @@ const Hero = () => {
                   type="submit"
                 >
                   Get early access
-                </Box>
+                </Box>                
               </Box>
             </Box>
           </Box>            

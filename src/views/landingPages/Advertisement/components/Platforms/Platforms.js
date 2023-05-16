@@ -90,14 +90,8 @@ const Platforms = () => {
                   alignItems={'center'}
                 >
                   <Box
-                    component={'img'}
-                    maxWidth={'100%'}
-                    marginBottom={2}
-                    src={item.icon}
-                  />
-                  <Box
                     component={Typography}
-                    variant={'h3'}
+                    variant={'h6'}
                     gutterBottom
                     fontWeight={500}
                     align={'center'}
@@ -106,7 +100,13 @@ const Platforms = () => {
                   </Box>
                   <Typography align={'center'} color="textSecondary">
                     {item.subtitle}
-                  </Typography>
+                  </Typography>                
+                  <Box
+                    component={'img'}
+                    maxWidth={'100%'}
+                    marginBottom={2}
+                    src={item.icon}
+                  />
                 </Box>
               </Box>
           </Grid>
