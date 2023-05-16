@@ -98,6 +98,9 @@ const Hero = () => {
           objectFit: 'cover',
         }}
         controls
+        autoPlay
+        muted  
+        loop      
       />        
       
         {/* <Box
