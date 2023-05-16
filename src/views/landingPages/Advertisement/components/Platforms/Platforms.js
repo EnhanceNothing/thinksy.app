@@ -91,7 +91,7 @@ const Platforms = () => {
                 >
                   <Box
                     component={'img'}
-                    maxWidth={600}
+                    maxWidth={'100%'}
                     marginBottom={2}
                     src={item.icon}
                   />
