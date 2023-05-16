@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import { Typography } from '@mui/material';
-import { ReactComponent as IconSvg } from './icon.svg';
+import { ReactComponent as IconSvg } from './icon-text-2.svg';
 
 const Webbee = ({ width = 45, height = 70 }) => {
   const theme = useTheme();

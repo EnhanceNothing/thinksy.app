@@ -23,7 +23,7 @@ const Footer = () => (
           href="/"
           title="thinksy"
           height={24}
-          width={35}
+          width={'100%'}
         >
           <WebbeeLogo height={'100%'} width={'100%'} />
         </Box>
