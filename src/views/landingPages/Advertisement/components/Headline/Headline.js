@@ -45,7 +45,7 @@ const Headline = () => {
               fontWeight: 700,
             }}
           >
-            Ideas spark innovation
+            Ideas spark innovation 💫
           </Typography>
         </Box>
         <Box marginBottom={4}>

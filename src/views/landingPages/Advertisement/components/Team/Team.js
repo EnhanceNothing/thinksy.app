@@ -18,6 +18,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedinIcon from '@mui/icons-material/LinkedIn';
 import edenImg from './images/eden.jpg';
 import calliImg from './images/calli.jpg';
+import {ReactComponent as highlightOne} from './images/highlight-1.svg';
+import {ReactComponent as highlightTwo} from './images/highlight-2.svg';
 import axios from 'axios'; 
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
@@ -111,7 +113,7 @@ const Team = () => {
             about: 'Eden is a Staff Engineer at Slack and an Ex-Google engineer.\nHe\'s currently building software and a chicken coop for his backyard.',
           },        
         ].map((item, i) => (
-          <Grid item xs={12} sm={24} md={12} key={i} sx={{
+          <Grid item xs={12} sm={12} md={6} key={i} sx={{
             marginLeft: i === 0 ? 'auto' : undefined,
             marginRight: i === 1 ? 'auto' : undefined,
           }}>
@@ -125,63 +127,66 @@ const Team = () => {
                 '&:hover': {
                   transform: `translateY(-${theme.spacing(1 / 2)})`,
                 },
-                display: 'flex',
-                flexDirection: {xs: 'column', md: 'row'},
-                alignItems: {xs: 'center', md: 'stretch'},
               }}
             >
-              <Box
-                component={Avatar}
-                src={item.avatar}
-                height={160}
-                width={160}
-                sx={{
-                  marginRight: {xs: 0, md: theme.spacing(2)},
-                  marginLeft: {xs: 0, md: theme.spacing(2)},
-                  alignSelf: {xs: 'center', md: 'stretch'},
-                }}
-              />
               <CardContent>
-                <Box>
-                  <ListItemText primary={item.name} secondary={item.title} />
-                  <Typography variant={'subtitle2'} color={'textSecondary'} sx={{ whiteSpace: 'pre-wrap' }}>
-                    {item.about}
-                  </Typography>
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="center"
+                >
+                  <Box
+                    component={Avatar}
+                    src={item.avatar}
+                    height={128}
+                    width={128}
+                  />
                   <Box marginTop={4}>
-                    {item.github && (
-                      <IconButton
-                        onClick={() => window.open(item.github)}
-                        size={'small'}
-                        sx={{
-                          marginRight: 1,
-                          color: colors.blueGrey[200],
-                        }}
-                      >
-                        <GitHubIcon />
-                      </IconButton>
-                    )}
-                    {item.twitter && (
-                      <IconButton
-                        onClick={() => window.open(item.twitter)}
-                        size={'small'}
-                        sx={{
-                          color: colors.blueGrey[200],
-                        }}
-                      >
-                        <TwitterIcon />
-                      </IconButton>
-                    )}
-                    {item.linkedin && (
-                      <IconButton
-                        onClick={() => window.open(item.linkedin)}
-                        size={'small'}
-                        sx={{
-                          color: colors.blueGrey[200],
-                        }}
-                      >
-                        <LinkedinIcon />
-                      </IconButton>
-                    )}                    
+                    <ListItemText
+                      primary={item.name}
+                      secondary={item.title}
+                      align="center"
+                    />
+                    <Typography variant={'subtitle2'} color={'textSecondary'} align="center">
+                      {item.about}
+                    </Typography>
+                    <Box marginTop={4} display="flex" justifyContent="center">
+                      {item.github && (
+                        <IconButton
+                          onClick={() => window.open(item.github)}
+                          size={'small'}
+                          sx={{
+                            marginRight: 1,
+                            color: colors.blueGrey[200],
+                          }}
+                        >
+                          <GitHubIcon />
+                        </IconButton>
+                      )}
+                      {item.twitter && (
+                        <IconButton
+                          onClick={() => window.open(item.twitter)}
+                          size={'small'}
+                          sx={{
+                            marginRight: 1,
+                            color: colors.blueGrey[200],
+                          }}
+                        >
+                          <TwitterIcon />
+                        </IconButton>
+                      )}
+                      {item.linkedin && (
+                        <IconButton
+                          onClick={() => window.open(item.linkedin)}
+                          size={'small'}
+                          sx={{
+                            color: colors.blueGrey[200],
+                          }}
+                        >
+                          <LinkedinIcon />
+                        </IconButton>
+                      )}
+                    </Box>
                   </Box>
                 </Box>
               </CardContent>
@@ -252,6 +257,7 @@ const Team = () => {
                   color="primary"
                   // size="large"
                   height={54}
+                  width={{ xs: '100%', sm: '100%', md: '35%' }}
                   marginTop={{ xs: 2, sm: 0 }}
                   marginLeft={{ sm: 2 }}
                   disabled={formik.isSubmitting}
