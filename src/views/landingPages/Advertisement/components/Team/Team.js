@@ -18,6 +18,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedinIcon from '@mui/icons-material/LinkedIn';
 import edenImg from './images/eden.jpg';
 import calliImg from './images/calli.jpg';
+import {ReactComponent as UnderlineSVG} from './images/words-line.svg';
 import {ReactComponent as highlightOne} from './images/highlight-1.svg';
 import {ReactComponent as highlightTwo} from './images/highlight-2.svg';
 import axios from 'axios'; 
@@ -121,6 +122,7 @@ const Team = () => {
               component={Card}
               borderRadius={3}
               boxShadow={2}
+              bgcolor={theme.palette.alternate.main}
               sx={{
                 textDecoration: 'none',
                 transition: 'all .2s ease-in-out',
@@ -147,7 +149,7 @@ const Team = () => {
                       secondary={item.title}
                       align="center"
                     />
-                    <Typography variant={'subtitle2'} color={'textSecondary'} align="center">
+                    <Typography variant={'subtitle2'} color={'textSecondary'}  sx={{ width: { xs: '100%', md: '80%' }, margin:'auto' }} align="center">
                       {item.about}
                     </Typography>
                     <Box marginTop={4} display="flex" justifyContent="center">
@@ -202,7 +204,7 @@ const Team = () => {
             padding={5}
             align={'center'}
           >
-            Don't lose another good idea
+            Don't lose another good idea 💡
           </Box>      
       <Box
             display="flex"

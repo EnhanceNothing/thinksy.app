@@ -51,7 +51,187 @@ const Platforms = () => {
           It's almost too easy
         </Box>
       </Box>
-      <Grid container spacing={2} marginBottom={4}>
+      <Grid container spacing={2}>
+  <Grid item xs={12} md={6}>
+    <Grid container direction="column" style={{ height: '100%' }}>
+      <Grid item style={{ height: '45%' }} paddingBottom={2}>
+              <Box
+                component={Card}
+                width={'100%'}
+                height={'100%'}
+                data-aos={'fade-up'}
+                flexDirection={'column'}
+                display={'flex'}
+                bgcolor={theme.palette.alternate.main}
+              >
+                <Box
+                  component={CardContent}
+                  display={'flex'}
+                  flexDirection={'column'}
+                  alignItems={'center'}
+                  padding={4}
+                  sx={{
+                    backgroundColor: theme.palette.warning,
+                  }}
+                >
+                  <Box
+                    component={Typography}
+                    variant={'h6'}
+                    gutterBottom
+                    fontWeight={500}
+                    align={'center'}
+                  >
+                    Summarize Automatically
+                  </Box>
+                  <Typography
+                    align={'center'}
+                    marginBottom={2}
+                    gutterBottom
+                    color="textSecondary"
+                  >
+                    Use AI to quickly get a summary of the quickiest wins you can get from your team's ideas.
+                  </Typography>                
+                  <Box
+                    component={'img'}
+                    maxWidth={'100%'}
+                    marginBottom={2}
+                    src={summaryImg}
+                    sx={{
+                        borderRadius: '10px',
+                    }}
+                  />
+                </Box>
+              </Box>
+      </Grid>
+      <Grid item style={{ height: '55%' }}  paddingBottom={2}>
+      <Box
+                component={Card}
+                width={'100%'}
+                height={'100%'}
+                data-aos={'fade-up'}
+                flexDirection={'column'}
+                display={'flex'}
+                bgcolor={theme.palette.alternate.main}
+              >
+                <Box
+                  component={CardContent}
+                  display={'flex'}
+                  flexDirection={'column'}
+                  alignItems={'center'}
+                  padding={4}
+                >
+                  <Box
+                    component={Typography}
+                    variant={'h6'}
+                    gutterBottom
+                    fontWeight={500}
+                    align={'center'}
+                  >
+                    Upvote Your Favorite Ideas
+                  </Box>
+                  <Typography align={'center'} paddingBottom={2} color="textSecondary">
+                    Figure out what ideas people want acted on first by looking at all the votes.
+                  </Typography>                
+                  <Box
+                    component={'img'}
+                    maxWidth={'100%'}
+                    marginBottom={2}
+                    src={voteImg}
+                    sx={{
+                        borderRadius: '10px',
+                    }}                    
+                  />
+                </Box>
+              </Box>
+      </Grid>
+    </Grid>
+  </Grid>
+  <Grid item xs={12} md={6}>
+    <Grid container direction="column" style={{ height: '100%' }}>
+      <Grid item style={{ height: '70%' }} paddingBottom={2}>
+      <Box
+                component={Card}
+                width={'100%'}
+                height={'100%'}
+                data-aos={'fade-up'}
+                flexDirection={'column'}
+                display={'flex'}
+                bgcolor={theme.palette.alternate.main}
+              >
+                <Box
+                  component={CardContent}
+                  display={'flex'}
+                  flexDirection={'column'}
+                  alignItems={'center'}
+                  padding={4}
+                >
+                  <Box
+                    component={Typography}
+                    variant={'h6'}
+                    gutterBottom
+                    fontWeight={500}
+                    align={'center'}
+                  >
+                    Organize by Tags
+                  </Box>
+                  <Typography align={'center'} color="textSecondary">
+                    Quickly add tags to sort by your team's categories or features.
+                  </Typography>                
+                  <Box
+                    component={'img'}
+                    maxWidth={'100%'}
+                    marginBottom={2}
+                    src={tagsImg}
+                  />
+                </Box>
+              </Box>
+      </Grid>
+      <Grid item style={{ height: '30%' }}  paddingBottom={2}>
+        <Box
+          component={Card}
+          width={'100%'}
+          height={'100%'}
+          data-aos={'fade-up'}
+          flexDirection={'column'}
+          display={'flex'}
+          bgcolor={theme.palette.alternate.main}
+          position="relative" // allow absolute positioning of children
+        >
+          <Box sx={{fontSize: {md: '5em'}, transform: 'rotate(20deg)'}} position="absolute" variant={'h6'} bottom={20} right={80}>🥳</Box>
+          <Box sx={{fontSize: {md: '5em'}, transform: 'rotate(10deg)'}} position="absolute" top={20} left={50}>🎉</Box>
+          <Box sx={{fontSize: {md: '2em'}, transform: 'scaleX(-1)'}} position="absolute" top={30} right={50}>🎉</Box>
+          <Box sx={{fontSize: {md: '2em'}, transform: 'scaleX(-1)'}} position="absolute" bottom={20} left={70}>🎉</Box>
+          
+          <Box
+            component={CardContent}
+            display={'flex'}
+            flexDirection={'column'}
+            alignItems={'center'}
+            padding={4}
+          >
+            <Box
+              component={Typography}
+              variant={'h6'}
+              gutterBottom
+              fontWeight={500}
+              align={'center'}
+            >
+              All right in Slack
+            </Box>
+            <Typography align={'center'} color="textSecondary">
+              - Share with different channels <br />
+              - Send to project management tools <br />
+              - Create automatic design docs <br />
+            </Typography>               
+          </Box>
+        </Box>
+
+      </Grid>
+    </Grid>
+  </Grid>
+</Grid>
+
+      {/* <Grid container spacing={2} marginBottom={4}>
         {[
           {
             title: 'Summarize Automatically',
@@ -74,7 +254,7 @@ const Platforms = () => {
             icon: voteImg,
           },
         ].map((item, i) => (
-          <Grid item xs={12} md={12} key={i}>
+          <Grid item xs={12} md={6} key={i}>
               <Box
                 component={Card}
                 width={'100%'}
@@ -111,13 +291,14 @@ const Platforms = () => {
               </Box>
           </Grid>
         ))}
-      </Grid>
+      </Grid> */}
       <Typography
           sx={{
             textTransform: 'uppercase',
             fontWeight: 'medium',
           }}
           gutterBottom
+          paddingTop={2}
           color={'secondary'}
           align={'center'}
         >

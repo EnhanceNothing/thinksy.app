@@ -9,19 +9,20 @@ const Headline = () => {
 
   return (
     <Box
+      padding={4}
       sx={{
         position: 'relative',
         '&::after': {
           position: 'absolute',
           content: '""',
-          width: '30%',
+          width: '100%', // To cover the whole box
           zIndex: 1,
           top: 0,
           left: 0,
           height: '100%',
-          backgroundSize: '18px 18px',
-          backgroundImage: `radial-gradient(${theme.palette.primary.dark} 20%, transparent 20%)`,
+          backgroundColor: theme.palette.secondary.main, // Use the secondary color
           opacity: 0.2,
+          borderRadius: '10px',
         },
       }}
     >
@@ -48,8 +49,8 @@ const Headline = () => {
             Ideas spark innovation 💫
           </Typography>
         </Box>
-        <Box marginBottom={4}>
-          <Typography variant="h6" align={'center'} color={'textSecondary'}>
+        <Box>
+          <Typography variant="h6" align={'center'} color={'textSecondary'} sx={{ width: { xs: '100%', md: '65%' }, margin:'auto' }}>
             We're building Thinksy to help innovators, creators and visionaries more effectively manage their most important asset - their ideas.
           </Typography>
         </Box>
