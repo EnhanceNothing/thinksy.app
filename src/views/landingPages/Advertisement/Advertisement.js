@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Container from 'common/Container';
+import demoVideo from './images/thinksy-graphic.mp4';
 import {
   Hero,
   Benefits,
@@ -48,11 +49,38 @@ const Advertisement = ({ themeMode }) => {
         <Platforms />
       </Container>
       <Container>
+        <Box  position={'relative'}>
+            <Box
+            component={'video'}
+            height={'100%'}
+            width={'100%'}
+            src={demoVideo}
+            alt="..."
+            loading="lazy"
+            boxShadow={4}
+            borderRadius={1.5}
+            sx={{
+              objectFit: 'cover',
+            }}
+            controls
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        </Box>
+      </Container>
+      <Box bgcolor={theme.palette.alternate.main}>
+          <Container>
+            <Pricing />
+          </Container>
+      </Box>
+      <Container>
         <Headline />
       </Container>
       <Container paddingTop={'0 !important'}>
         <Team />
-      </Container>          
+      </Container>
     </Box>
   );
 };

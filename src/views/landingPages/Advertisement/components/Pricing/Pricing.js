@@ -48,18 +48,16 @@ const Pricing = () => {
           variant={'h3'}
           align={'center'}
         >
-          Pick the best plan based
-          <br />
-          on your ad spend
+          Early Access
         </Box>
       </Box>
-      <Grid container spacing={isMd ? 0 : 2}>
+      <Grid container spacing={isMd ? 0 : 2} justifyContent="center">
         <Grid item xs={12} md={6}>
           <Card data-aos={isMd ? 'fade-right' : 'fade-up'}>
             <Box component={CardContent} padding={{ sm: 4 }}>
               <Box display={'flex'} justifyContent={'center'} marginBottom={4}>
                 <ToggleButtonGroup
-                  value={pricingOption}
+                  value='{pricingOption}'
                   exclusive
                   onChange={handleClick}
                 >
@@ -84,7 +82,7 @@ const Pricing = () => {
                             : 'primary',
                       }}
                     >
-                      Annual
+                      1-5 users
                     </Typography>
                   </ToggleButton>
                   <ToggleButton
@@ -108,7 +106,7 @@ const Pricing = () => {
                             : 'primary',
                       }}
                     >
-                      Monthly
+                      6+ users
                     </Typography>
                   </ToggleButton>
                 </ToggleButtonGroup>
@@ -120,22 +118,27 @@ const Pricing = () => {
                   align={'center'}
                   gutterBottom
                 >
-                  ${pricingOption === 'annual' ? '240' : '29'}
+                  ${pricingOption === 'annual' ? '15' : '6'}
+                  <Typography
+                    fontWeight={600}
+                    component="span"
+                    variant="body2"
+                    display="inline"
+                    style={{ fontSize: '0.5em' }}
+                  >
+                    /{pricingOption === 'annual' ? 'mo' : 'user'}
+                  </Typography>
                 </Typography>
                 <Typography color="text.secondary" align={'center'}>
-                  6 month of technical support.
-                  <br />
-                  Plus unlimited updates.
+                  Pricing exclusive to our early access signups.
                 </Typography>
               </Box>
               <Grid container spacing={1}>
                 {[
-                  'All features',
+                  'Unlimited tags',
+                  'Unlimited ideas',
                   'Email support',
-                  'Google Ads',
-                  'SSO via Google',
-                  'API access',
-                  'Facebook Ads',
+                  'Slack Connect support',
                 ].map((item, i) => (
                   <Grid item xs={12} sm={6} key={i}>
                     <Box
@@ -176,73 +179,11 @@ const Pricing = () => {
                 ))}
               </Grid>
             </Box>
-            <Divider />
+            {/* <Divider />
             <Box component={CardActions} justifyContent={'center'}>
               <Button size={'large'}>Learn More</Button>
-            </Box>
+            </Box> */}
           </Card>
-        </Grid>
-        <Grid item container xs={12} md={6} alignItems={'center'}>
-          <Box
-            component={Card}
-            bgcolor={theme.palette.primary.main}
-            data-aos={isMd ? 'fade-left' : 'fade-up'}
-          >
-            <Box
-              component={CardContent}
-              padding={{ sm: 4 }}
-              display={'flex'}
-              flexDirection={'column'}
-              alignItems={'center'}
-            >
-              <Box color={theme.palette.common.white} marginBottom={4}>
-                <svg
-                  width={80}
-                  height={80}
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
-                </svg>
-              </Box>
-              <Box
-                component={Typography}
-                variant={'h4'}
-                color={theme.palette.common.white}
-                fontWeight={600}
-                gutterBottom
-              >
-                Customized
-              </Box>
-              <Box
-                component={Typography}
-                color={theme.palette.common.white}
-                gutterBottom
-                align={'center'}
-              >
-                Design a custom package for your business.
-              </Box>
-              <Box
-                component={Typography}
-                color={theme.palette.common.white}
-                align={'center'}
-              >
-                Available for businesses with large payments volume or unique
-                business models.
-              </Box>
-            </Box>
-            <Divider />
-            <Box component={CardActions} justifyContent={'center'}>
-              <Box
-                component={Button}
-                color={theme.palette.common.white}
-                size={'large'}
-              >
-                Contact sales
-              </Box>
-            </Box>
-          </Box>
         </Grid>
       </Grid>
     </Box>

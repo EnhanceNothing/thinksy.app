@@ -86,12 +86,12 @@ const Hero = () => {
         controls
         autoPlay
         muted  
-        loop      
-        playsInline        
+        loop
+        playsInline
       />
       </Box>
     );
-  };  
+  };
 
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -198,17 +198,6 @@ const Hero = () => {
       >
 
       <GridItemVideoBlock />
-        {/* <Box
-          component={'img'}
-          height={'100%'}
-          width={'100%'}
-          src={addIdeaImg}
-          alt="..."
-          loading="lazy"
-          boxShadow={3}
-          borderRadius={4}
-          maxWidth={800}
-        /> */}
       </Grid>
     </Grid>
   );

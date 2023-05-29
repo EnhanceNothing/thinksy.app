@@ -292,7 +292,7 @@ const Platforms = () => {
           </Grid>
         ))}
       </Grid> */}
-      <Typography
+      {/* <Typography
           sx={{
             textTransform: 'uppercase',
             fontWeight: 'medium',
@@ -303,8 +303,8 @@ const Platforms = () => {
           align={'center'}
         >
           Join our journey
-        </Typography>      
-      <Box marginBottom={4}>
+        </Typography> */}
+      {/* <Box marginBottom={4}>
           <Box
             component={Typography}
             fontWeight={700}
@@ -333,7 +333,7 @@ const Platforms = () => {
                   width: '100%' // make sure the iframe takes up the full width of the Box component
                 }}
           />
-      </Box>      
+      </Box> */}
     </Box>
   );
 };
