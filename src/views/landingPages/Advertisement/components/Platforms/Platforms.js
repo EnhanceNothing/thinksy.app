@@ -219,9 +219,9 @@ const Platforms = () => {
               All right in Slack
             </Box>
             <Typography align={'center'} color="textSecondary">
-              - Share with different channels <br />
-              - Send to project management tools <br />
-              - Create automatic design docs <br />
+            &#x2022; Share with different channels <br />
+              &#x2022; Send to project management tools <br />
+              &#x2022; Create automatic design docs <br />
             </Typography>               
           </Box>
         </Box>
@@ -280,7 +280,7 @@ const Platforms = () => {
                   </Box>
                   <Typography align={'center'} color="textSecondary">
                     {item.subtitle}
-                  </Typography>                
+                  </Typography>
                   <Box
                     component={'img'}
                     maxWidth={'100%'}
@@ -292,7 +292,7 @@ const Platforms = () => {
           </Grid>
         ))}
       </Grid> */}
-      {/* <Typography
+      <Typography
           sx={{
             textTransform: 'uppercase',
             fontWeight: 'medium',
@@ -303,8 +303,8 @@ const Platforms = () => {
           align={'center'}
         >
           Join our journey
-        </Typography> */}
-      {/* <Box marginBottom={4}>
+        </Typography>
+      <Box marginBottom={4}>
           <Box
             component={Typography}
             fontWeight={700}
@@ -333,7 +333,7 @@ const Platforms = () => {
                   width: '100%' // make sure the iframe takes up the full width of the Box component
                 }}
           />
-      </Box> */}
+      </Box>
     </Box>
   );
 };
