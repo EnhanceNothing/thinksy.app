@@ -99,7 +99,7 @@ const Hero = () => {
 
   return (
     <Grid container spacing={4}>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={12}>
         <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
           <Box marginBottom={2}>
             <Typography
@@ -107,17 +107,17 @@ const Hero = () => {
               color="textPrimary"
               sx={{ fontWeight: 700 }}
             >
-              Don’t lose another{" "}
+              Save {" "}
               <Box component="span" sx={{ position: 'relative', display: 'inline-block' }}>
-                good
+                hours
                 <Box component={UnderlineSVG} sx={{ position: 'absolute', left: '-1px', bottom: '-10px', width: '100%',  zIndex: -1 }}/>
               </Box>{" "}
-              idea
+              compiling data for your next performance review
             </Typography>
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="textSecondary">
-              Thinksy saves & organizes your ideas directly in Slack so you don't have to
+            Thinksy helps engineers and their managers automatically summarize their work across JIRA, GitHub and Google Calendar for a faster, painless performance review and promotion process.
             </Typography>
           </Box>
           <Box
@@ -187,7 +187,7 @@ const Hero = () => {
           </Box>
         </Box>
       </Grid>
-      <Grid
+      {/* <Grid
         item
         container
         alignItems={'center'}
@@ -198,7 +198,7 @@ const Hero = () => {
       >
 
       <GridItemVideoBlock />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };

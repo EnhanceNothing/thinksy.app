@@ -46,12 +46,13 @@ const Headline = () => {
               fontWeight: 700,
             }}
           >
-            Ideas spark innovation 💫
+            Performance tools made for <br />
+            software engineers
           </Typography>
         </Box>
         <Box>
           <Typography variant="h6" align={'center'} color={'textSecondary'} sx={{ width: { xs: '100%', md: '65%' }, margin:'auto' }}>
-            We're building Thinksy to help innovators, creators and visionaries more effectively manage their most important asset - their ideas.
+            We’re on a mission to make performance reviews and promotion packets a delightful, not dreadful experience.
           </Typography>
         </Box>
       </Box>

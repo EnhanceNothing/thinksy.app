@@ -18,15 +18,6 @@ import ToggleButton from '@mui/material/ToggleButton';
 
 const Pricing = () => {
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
-  });
-
-  const [pricingOption, setPricingOption] = useState('annual');
-
-  const handleClick = (event, newPricingOption) => {
-    setPricingOption(newPricingOption);
-  };
 
   return (
     <Box>
@@ -40,151 +31,201 @@ const Pricing = () => {
           color={'secondary'}
           align={'center'}
         >
-          Pricing
+          Join our journey
         </Typography>
         <Box
           component={Typography}
           fontWeight={700}
           variant={'h3'}
           align={'center'}
+          gutterBottom
         >
-          Early Access
+          Become an Early Adopter
         </Box>
+        <Typography
+          variant={'h6'}
+          component={'p'}
+          color={'textSecondary'}
+          align={'center'}
+        >
+          Pricing exclusive to our early access signups.
+        </Typography>
       </Box>
-      <Grid container spacing={isMd ? 0 : 2} justifyContent="center">
-        <Grid item xs={12} md={6}>
-          <Card data-aos={isMd ? 'fade-right' : 'fade-up'}>
-            <Box component={CardContent} padding={{ sm: 4 }}>
-              <Box display={'flex'} justifyContent={'center'} marginBottom={4}>
-                <ToggleButtonGroup
-                  value='{pricingOption}'
-                  exclusive
-                  onChange={handleClick}
+      <Grid container spacing={4}>
+        {[
+          {
+            title: 'Basic',
+            price: '6',
+            features: [
+              {
+                title: 'Unlimited reports',
+                isIncluded: true,
+              },
+              {
+                title: 'Unlimited integrations',
+                isIncluded: true,
+              },
+              {
+                title: 'Up to 4 seats',
+                isIncluded: true,
+              },
+              {
+                title: 'Priority Support',
+                isIncluded: false,
+              },
+              {
+                title: 'Custom admin controls',
+                isIncluded: false,
+              },
+              {
+                title: 'Custom report prompts',
+                isIncluded: false,
+              },
+            ],
+            isHighlighted: true,
+            btnText: 'Get pro',
+          },
+          {
+            title: 'Premium',
+            price: '12',
+            features: [
+              {
+                title: 'Unlimited reports',
+                isIncluded: true,
+              },
+              {
+                title: 'Unlimited integrations',
+                isIncluded: true,
+              },
+              {
+                title: 'Up to 30 seats',
+                isIncluded: true,
+              },
+              {
+                title: 'Priority Support',
+                isIncluded: true,
+              },
+              {
+                title: 'Custom admin controls',
+                isIncluded: false,
+              },
+              {
+                title: 'Custom report prompts',
+                isIncluded: false,
+              },
+            ],
+            isHighlighted: true,
+            btnText: 'Contact us',
+          },
+          {
+            title: 'Enterprise',
+            price: '50',
+            features: [
+              {
+                title: 'Unlimited reports',
+                isIncluded: true,
+              },
+              {
+                title: 'Unlimited integrations',
+                isIncluded: true,
+              },
+              {
+                title: 'Unlimited seats',
+                isIncluded: true,
+              },
+              {
+                title: 'Priority Support',
+                isIncluded: true,
+              },
+              {
+                title: 'Custom admin controls',
+                isIncluded: true,
+              },
+              {
+                title: 'Custom report prompts',
+                isIncluded: true,
+              },
+            ],
+            isHighlighted: false,
+            btnText: 'Contact us',
+          },
+        ].map((item, i) => (
+          <Grid item xs={12} md={4} key={i} data-aos={'fade-up'}>
+            <Box
+              component={Card}
+              height={'100%'}
+              display={'flex'}
+              flexDirection={'column'}
+              boxShadow={0}
+              border={`1px solid ${theme.palette.divider}`}
+              borderRadius={4}
+            >
+              <Box component={CardContent} padding={4}>
+                <Box
+                  marginBottom={4}
+                  display={'flex'}
+                  flexDirection={'column'}
+                  alignItems={'center'}
                 >
-                  <ToggleButton
-                    value="annual"
-                    size={'small'}
-                    sx={{
-                      backgroundColor:
-                        pricingOption === 'annual'
-                          ? `${theme.palette.primary.light} !important`
-                          : 'transparent',
-                      border: `1px solid ${theme.palette.primary.main}`,
-                    }}
-                  >
-                    <Typography
-                      variant="subtitle2"
-                      sx={{
-                        fontWeight: 'medium',
-                        color:
-                          pricingOption === 'annual'
-                            ? theme.palette.common.white
-                            : 'primary',
-                      }}
-                    >
-                      1-5 users
-                    </Typography>
-                  </ToggleButton>
-                  <ToggleButton
-                    value="monthly"
-                    size={'small'}
-                    sx={{
-                      backgroundColor:
-                        pricingOption === 'monthly'
-                          ? `${theme.palette.primary.light} !important`
-                          : 'transparent',
-                      border: `1px solid ${theme.palette.primary.main}`,
-                    }}
-                  >
-                    <Typography
-                      variant="subtitle2"
-                      sx={{
-                        fontWeight: 'medium',
-                        color:
-                          pricingOption !== 'annual'
-                            ? theme.palette.common.white
-                            : 'primary',
-                      }}
-                    >
-                      6+ users
-                    </Typography>
-                  </ToggleButton>
-                </ToggleButtonGroup>
-              </Box>
-              <Box marginBottom={4}>
-                <Typography
-                  fontWeight={600}
-                  variant={'h2'}
-                  align={'center'}
-                  gutterBottom
-                >
-                  ${pricingOption === 'annual' ? '15' : '6'}
-                  <Typography
-                    fontWeight={600}
-                    component="span"
-                    variant="body2"
-                    display="inline"
-                    style={{ fontSize: '0.5em' }}
-                  >
-                    /{pricingOption === 'annual' ? 'mo' : 'user'}
-                  </Typography>
-                </Typography>
-                <Typography color="text.secondary" align={'center'}>
-                  Pricing exclusive to our early access signups.
-                </Typography>
-              </Box>
-              <Grid container spacing={1}>
-                {[
-                  'Unlimited tags',
-                  'Unlimited ideas',
-                  'Email support',
-                  'Slack Connect support',
-                ].map((item, i) => (
-                  <Grid item xs={12} sm={6} key={i}>
-                    <Box
-                      component={ListItem}
-                      disableGutters
-                      width={'auto'}
-                      padding={0}
-                    >
-                      <Box
-                        component={ListItemAvatar}
-                        minWidth={'auto !important'}
-                        marginRight={2}
-                      >
-                        <Box
-                          component={Avatar}
-                          bgcolor={theme.palette.secondary.main}
-                          width={20}
-                          height={20}
-                        >
-                          <svg
-                            width={12}
-                            height={12}
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </Box>
-                      </Box>
-                      <ListItemText primary={item} />
+                  <Typography variant={'h6'} gutterBottom>
+                    <Box component={'span'} fontWeight={600}>
+                      {item.title}
                     </Box>
-                  </Grid>
-                ))}
-              </Grid>
+                  </Typography>
+                  <Box display={'flex'} alignItems={'flex-start'}>
+                    <Typography variant={'h4'} color={'primary'}>
+                      <Box
+                        component={'span'}
+                        fontWeight={600}
+                        marginRight={1 / 2}
+                      >
+                        $
+                      </Box>
+                    </Typography>
+                    <Typography variant={'h2'} color={'primary'} gutterBottom>
+                      <Box component={'span'} fontWeight={600}>
+                        {item.price}
+                      </Box>
+                    </Typography>
+                  </Box>
+                  <Typography variant={'subtitle2'} color={'textSecondary'}>
+                    Per user, per month
+                  </Typography>
+                </Box>
+                <Grid container spacing={1}>
+                  {item.features.map((feature, j) => (
+                    <Grid item xs={12} key={j}>
+                      <Typography
+                        component={'p'}
+                        align={'center'}
+                        style={{
+                          textDecoration: !feature.isIncluded
+                            ? 'line-through'
+                            : 'none',
+                        }}
+                      >
+                        {feature.title}
+                      </Typography>
+                    </Grid>
+                  ))}
+                </Grid>
+              </Box>
+              <Box flexGrow={1} />
+              {/* <Box
+                component={CardActions}
+                justifyContent={'center'}
+                padding={4}
+              >
+                <Button
+                  size={'large'}
+                  variant={item.isHighlighted ? 'contained' : 'outlined'}
+                >
+                  {item.btnText}
+                </Button>
+              </Box> */}
             </Box>
-            {/* <Divider />
-            <Box component={CardActions} justifyContent={'center'}>
-              <Button size={'large'}>Learn More</Button>
-            </Box> */}
-          </Card>
-        </Grid>
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );

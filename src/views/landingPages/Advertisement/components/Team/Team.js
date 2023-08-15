@@ -204,8 +204,8 @@ const Team = () => {
             padding={5}
             align={'center'}
           >
-            Don't lose another good idea 💡
-          </Box>      
+            Save hours compiling data for your next performance review 💡
+          </Box>
       <Box
             display="flex"
             flexDirection={'column'}

@@ -14,6 +14,9 @@ import aiImg from './images/ai.png';
 import tagsImg from './images/tags.png';
 import voteImg from './images/vote.png';
 import summaryImg from './images/summary.png';
+import demo1 from './images/demo1.png';
+import demo2 from './images/demo2.png';
+import demo3 from './images/demo3.png';
 import { imageListItemBarClasses } from '@mui/material';
 
 const Platforms = () => {
@@ -31,7 +34,7 @@ const Platforms = () => {
   return (
     <Box>
       <Box marginBottom={4}>
-        <Typography
+        {/* <Typography
           sx={{
             textTransform: 'uppercase',
             fontWeight: 'medium',
@@ -41,225 +44,60 @@ const Platforms = () => {
           align={'center'}
         >
           No More Roadblocks
-        </Typography>
+        </Typography> */}
         <Box
           component={Typography}
           fontWeight={700}
           variant={'h3'}
           align={'center'}
         >
-          It's almost too easy
+          Forgot to keep a running list of your accomplishments over the past 6 months?
+            <Box component="span" color={theme.palette.secondary.main} sx={{ position: 'relative', display: 'inline-block' }}>
+              Thinksy can help
+            </Box>{" "}
         </Box>
       </Box>
       <Grid container spacing={2}>
-  <Grid item xs={12} md={6}>
-    <Grid container direction="column" style={{ height: '100%' }}>
-      <Grid item style={{ height: '45%' }} paddingBottom={2}>
-              <Box
-                component={Card}
-                width={'100%'}
-                height={'100%'}
-                data-aos={'fade-up'}
-                flexDirection={'column'}
-                display={'flex'}
-                bgcolor={theme.palette.alternate.main}
-              >
-                <Box
-                  component={CardContent}
-                  display={'flex'}
-                  flexDirection={'column'}
-                  alignItems={'center'}
-                  padding={4}
-                  sx={{
-                    backgroundColor: theme.palette.warning,
-                  }}
-                >
-                  <Box
-                    component={Typography}
-                    variant={'h6'}
-                    gutterBottom
-                    fontWeight={500}
-                    align={'center'}
-                  >
-                    Summarize Automatically
-                  </Box>
-                  <Typography
-                    align={'center'}
-                    marginBottom={2}
-                    gutterBottom
-                    color="textSecondary"
-                  >
-                    Use AI to quickly get a summary of the quickiest wins you can get from your team's ideas.
-                  </Typography>                
-                  <Box
-                    component={'img'}
-                    maxWidth={'100%'}
-                    marginBottom={2}
-                    src={summaryImg}
-                    sx={{
-                        borderRadius: '10px',
-                    }}
-                  />
-                </Box>
-              </Box>
-      </Grid>
-      <Grid item style={{ height: '55%' }}  paddingBottom={2}>
-      <Box
-                component={Card}
-                width={'100%'}
-                height={'100%'}
-                data-aos={'fade-up'}
-                flexDirection={'column'}
-                display={'flex'}
-                bgcolor={theme.palette.alternate.main}
-              >
-                <Box
-                  component={CardContent}
-                  display={'flex'}
-                  flexDirection={'column'}
-                  alignItems={'center'}
-                  padding={4}
-                >
-                  <Box
-                    component={Typography}
-                    variant={'h6'}
-                    gutterBottom
-                    fontWeight={500}
-                    align={'center'}
-                  >
-                    Upvote Your Favorite Ideas
-                  </Box>
-                  <Typography align={'center'} paddingBottom={2} color="textSecondary">
-                    Figure out what ideas people want acted on first by looking at all the votes.
-                  </Typography>                
-                  <Box
-                    component={'img'}
-                    maxWidth={'100%'}
-                    marginBottom={2}
-                    src={voteImg}
-                    sx={{
-                        borderRadius: '10px',
-                    }}                    
-                  />
-                </Box>
-              </Box>
-      </Grid>
-    </Grid>
-  </Grid>
-  <Grid item xs={12} md={6}>
-    <Grid container direction="column" style={{ height: '100%' }}>
-      <Grid item style={{ height: '70%' }} paddingBottom={2}>
-      <Box
-                component={Card}
-                width={'100%'}
-                height={'100%'}
-                data-aos={'fade-up'}
-                flexDirection={'column'}
-                display={'flex'}
-                bgcolor={theme.palette.alternate.main}
-              >
-                <Box
-                  component={CardContent}
-                  display={'flex'}
-                  flexDirection={'column'}
-                  alignItems={'center'}
-                  padding={4}
-                >
-                  <Box
-                    component={Typography}
-                    variant={'h6'}
-                    gutterBottom
-                    fontWeight={500}
-                    align={'center'}
-                  >
-                    Organize by Tags
-                  </Box>
-                  <Typography align={'center'} color="textSecondary">
-                    Quickly add tags to sort by your team's categories or features.
-                  </Typography>                
-                  <Box
-                    component={'img'}
-                    maxWidth={'100%'}
-                    marginBottom={2}
-                    src={tagsImg}
-                  />
-                </Box>
-              </Box>
-      </Grid>
-      <Grid item style={{ height: '30%' }}  paddingBottom={2}>
-        <Box
-          component={Card}
-          width={'100%'}
-          height={'100%'}
-          data-aos={'fade-up'}
-          flexDirection={'column'}
-          display={'flex'}
-          bgcolor={theme.palette.alternate.main}
-          position="relative" // allow absolute positioning of children
-        >
-          <Box sx={{fontSize: {md: '5em'}, transform: 'rotate(20deg)'}} position="absolute" variant={'h6'} bottom={20} right={80}>🥳</Box>
-          <Box sx={{fontSize: {md: '5em'}, transform: 'rotate(10deg)'}} position="absolute" top={20} left={50}>🎉</Box>
-          <Box sx={{fontSize: {md: '2em'}, transform: 'scaleX(-1)'}} position="absolute" top={30} right={50}>🎉</Box>
-          <Box sx={{fontSize: {md: '2em'}, transform: 'scaleX(-1)'}} position="absolute" bottom={20} left={70}>🎉</Box>
-          
-          <Box
-            component={CardContent}
-            display={'flex'}
-            flexDirection={'column'}
-            alignItems={'center'}
-            padding={4}
-          >
-            <Box
-              component={Typography}
-              variant={'h6'}
-              gutterBottom
-              fontWeight={500}
-              align={'center'}
-            >
-              All right in Slack
-            </Box>
-            <Typography align={'center'} color="textSecondary">
-            &#x2022; Share with different channels <br />
-              &#x2022; Send to project management tools <br />
-              &#x2022; Create automatic design docs <br />
-            </Typography>               
-          </Box>
-        </Box>
-
-      </Grid>
-    </Grid>
-  </Grid>
-</Grid>
-
-      {/* <Grid container spacing={2} marginBottom={4}>
         {[
           {
-            title: 'Summarize Automatically',
+            title: 'Connect the apps you want to use',
             subtitle:
-              'Use AI to quickly get a summary of the quickiest wins you can get from your team\'s ideas.',
-            icon:
-              summaryImg,
+              'Plug in your calendar, Jira, GitHub and more to Thinksy without leaving Slack.',
+            icon: demo3,
           },
           {
-            title: 'Organize by Tags',
+            title: 'Define the parameters',
             subtitle:
-              'Quickly add tags to sort by your team\'s categories or features. ',
-            icon:
-              tagsImg,
+              'Add Slack channels and a time frame to the scope.',
+            icon: demo1,
           },
           {
-            title: 'Upvote Your Favorite Ideas',
+            title: 'Get a summary of your work, instantly',
             subtitle:
-              'Figure out what ideas people want acted on first by looking at all the votes.',
-            icon: voteImg,
+              'See projects, key contributions, strengths & skills, areas of improvement and more.',
+            icon: demo2,
           },
         ].map((item, i) => (
-          <Grid item xs={12} md={6} key={i}>
+          <Grid item xs={12} md={4} key={i}>
+            <Box
+              component={'a'}
+              display={'block'}
+              width={'100%'}
+              height={'100%'}
+              sx={{
+                textDecoration: 'none',
+                transition: 'all .2s ease-in-out',
+                '&:hover': {
+                  transform: `translateY(-${theme.spacing(1 / 2)})`,
+                },
+              }}
+            >
               <Box
                 component={Card}
                 width={'100%'}
                 height={'100%'}
                 data-aos={'fade-up'}
+                borderRadius={3}
                 flexDirection={'column'}
                 display={'flex'}
               >
@@ -269,6 +107,12 @@ const Platforms = () => {
                   flexDirection={'column'}
                   alignItems={'center'}
                 >
+                  <Box
+                    component={'img'}
+                    maxWidth={'100%'}
+                    marginBottom={2}
+                    src={item.icon}
+                  />
                   <Box
                     component={Typography}
                     variant={'h6'}
@@ -281,59 +125,15 @@ const Platforms = () => {
                   <Typography align={'center'} color="textSecondary">
                     {item.subtitle}
                   </Typography>
-                  <Box
-                    component={'img'}
-                    maxWidth={'100%'}
-                    marginBottom={2}
-                    src={item.icon}
-                  />
                 </Box>
+                <Box flexGrow={1} />
+
               </Box>
+            </Box>
           </Grid>
         ))}
-      </Grid> */}
-      <Typography
-          sx={{
-            textTransform: 'uppercase',
-            fontWeight: 'medium',
-          }}
-          gutterBottom
-          paddingTop={2}
-          color={'secondary'}
-          align={'center'}
-        >
-          Join our journey
-        </Typography>
-      <Box marginBottom={4}>
-          <Box
-            component={Typography}
-            fontWeight={700}
-            variant={'h3'}
-            align={'center'}
-          >
-            We build in public too
-          </Box>
+      </Grid>
 
-          <Box
-                component={'iframe'}
-                src="https://feed.mmntm.build/thinksy/embed?isAutoConfig=true"
-                fullWidth
-                height={450}
-                frameBorder="0"
-                scrolling="auto"
-                marginWidth="0"
-                marginHeight="0"
-                style={{
-                  border: 'none',
-                  padding: 0,
-                  margin: 0,
-                  overflow: 'hidden',
-                  marginheight: 0,
-                  marginWdith: 0,
-                  width: '100%' // make sure the iframe takes up the full width of the Box component
-                }}
-          />
-      </Box>
     </Box>
   );
 };

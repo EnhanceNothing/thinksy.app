@@ -49,26 +49,6 @@ const Advertisement = ({ themeMode }) => {
         <Platforms />
       </Container>
       <Container>
-        <Box  position={'relative'}>
-            <Box
-            component={'video'}
-            height={'100%'}
-            width={'100%'}
-            src={demoVideo}
-            alt="..."
-            loading="lazy"
-            boxShadow={4}
-            borderRadius={1.5}
-            sx={{
-              objectFit: 'cover',
-            }}
-            controls
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
-        </Box>
       </Container>
       <Box bgcolor={theme.palette.alternate.main}>
           <Container>
