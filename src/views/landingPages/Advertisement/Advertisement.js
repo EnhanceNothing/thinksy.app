@@ -48,13 +48,15 @@ const Advertisement = ({ themeMode }) => {
       <Container>
         <Platforms />
       </Container>
-      <Container>
-      </Container>
+
+
+
       <Box bgcolor={theme.palette.alternate.main}>
           <Container>
             <Pricing />
           </Container>
       </Box>
+
       <Container>
         <Headline />
       </Container>
