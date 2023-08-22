@@ -10,8 +10,8 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import addIdeaImg from './images/add-idea-mock.png';
 import {ReactComponent as UnderlineSVG} from './images/words-line.svg';
-import demoVideo from './images/demo-5.mp4';
-import axios from 'axios'; 
+import demoVideo from './images/demo6.mp4';
+import axios from 'axios';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const validationSchema = yup.object({
@@ -69,10 +69,10 @@ const Hero = () => {
 
   const GridItemVideoBlock = () => {
     return (
-      <Box maxHeight={300} position={'relative'}>
+      <Box maxHeight={500} position={'relative'}>
         <Box
         component={'video'}
-        maxHeight={300}
+        maxHeight={500}
         height={'100%'}
         width={'100%'}
         src={demoVideo}
@@ -117,7 +117,7 @@ const Hero = () => {
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="textSecondary">
-            Thinksy helps engineers and their managers automatically summarize their work across JIRA, GitHub and Google Calendar for a faster, painless performance review and promotion process.
+            Thinksy is a Slack app that helps engineers and their managers automatically summarize their work across JIRA, GitHub and Google Calendar for a faster, painless performance review and promotion process.
             </Typography>
           </Box>
           <Box
@@ -187,18 +187,18 @@ const Hero = () => {
           </Box>
         </Box>
       </Grid>
-      {/* <Grid
+      <Grid
         item
         container
         alignItems={'center'}
         justifyContent={'center'}
         xs={12}
-        md={6}
+        md={12}
         data-aos={isMd ? 'fade-left' : 'fade-up'}
       >
 
       <GridItemVideoBlock />
-      </Grid> */}
+      </Grid>
     </Grid>
   );
 };

@@ -14,9 +14,9 @@ import aiImg from './images/ai.png';
 import tagsImg from './images/tags.png';
 import voteImg from './images/vote.png';
 import summaryImg from './images/summary.png';
-import demo1 from './images/demo1.png';
-import demo2 from './images/demo2.png';
-import demo3 from './images/demo3.png';
+import demo1 from './images/demo1-2.png';
+import demo2 from './images/demo2-2.png';
+import demo3 from './images/demo3-3.png';
 import { imageListItemBarClasses } from '@mui/material';
 
 const Platforms = () => {
@@ -51,7 +51,7 @@ const Platforms = () => {
           variant={'h3'}
           align={'center'}
         >
-          Forgot to keep a running list of your accomplishments over the past 6 months?
+          Forgot to keep a running list of your accomplishments?<br />
             <Box component="span" color={theme.palette.secondary.main} sx={{ position: 'relative', display: 'inline-block' }}>
               Thinksy can help
             </Box>{" "}

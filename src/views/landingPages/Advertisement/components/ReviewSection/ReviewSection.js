@@ -8,6 +8,8 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import ListItemText from '@mui/material/ListItemText';
 import Container from 'common/Container';
+import ReviewSummary from './images/demo4-1.png';
+import { Grid } from '@mui/material';
 
 const ReviewSection = () => {
   const theme = useTheme();
@@ -38,6 +40,10 @@ const ReviewSection = () => {
         paddingX={{ xs: 2, sm: 6, md: 12 }}
       >
         <Box data-aos={'fade-up'}>
+
+          <Grid container spacing={2}>
+
+          </Grid>
           <Typography
             sx={{
               textTransform: 'uppercase',
@@ -47,11 +53,57 @@ const ReviewSection = () => {
             color={'secondary'}
             align={'center'}
           >
-            Case Study
+            the ultimate Performance tool
           </Typography>
           <Typography variant={'h3'} gutterBottom align={'center'}>
             <Box fontWeight={700} component={'span'}>
-              webbee
+            Self-review & Peer-reviews
+            </Box>
+          </Typography>
+          <Typography variant={'h6'} gutterBottom align={'center'}>
+            <Box fontWeight={400} component={'span'}  color="textSecondary">
+            Take the <strong>manual work</strong> out of data collection & save hours on your next review cycle <br /><br />
+            </Box>
+          </Typography>
+
+
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={6}>
+              <Box
+                component={Typography}
+                variant={'h6'}
+                paddingTop={5}
+                fontWeight={400}
+                align={'left'}
+                gutterBottom
+              >
+                Thinksy <strong>instantly summarizes</strong> what you’ve been working on throughout the past review cycle, providing a concise outline of your <strong>projects</strong>,
+                key <strong>contributions</strong>, participation, <strong>achievements</strong>, the number and type of meetings attended, and can even <strong>identify strengths &
+                weaknesses</strong> demonstrated throughout the period.
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box
+                      component={'img'}
+                      maxWidth={'100%'}
+                      marginBottom={2}
+                      src={ReviewSummary}
+              />
+            </Grid>
+
+          </Grid>
+
+
+
+
+          <Typography variant={'h3'} gutterBottom align={'center'}>
+            <Box fontWeight={700} component={'span'}>
+            Promotion Packets
+            </Box>
+          </Typography>
+          <Typography variant={'h6'} gutterBottom align={'center'}>
+            <Box fontWeight={400} component={'span'} color="textSecondary">
+            Let Thinksy <strong>collect & organize</strong> examples of your work so you can get to the next level <br /><br />
             </Box>
           </Typography>
           <Box
@@ -61,29 +113,27 @@ const ReviewSection = () => {
             align={'center'}
             gutterBottom
           >
-            "In case you are starting a business or launching any product in the
-            market, Using the availbale pages you can quickly get started in a
-            day with your website(some coding experience also required). The
-            desgin quality is polished very well, it looks very professional."
+            Save hours going back through your Jira, Github, Slack and other apps to find examples of your work.
+            Just ask Thinksy to look for skills demonstrated, release posts, complicated PRs and more -- all while hyperlinking all that work right into your review.
           </Box>
-          <Box
-            component={'ul'}
-            display={'flex'}
-            justifyContent={'center'}
-            width={'100%'}
-          >
-            <Box component={ListItem} disableGutters width={'auto'}>
-              <ListItemAvatar>
-                <Avatar
-                  src={'https://assets.maccarianagency.com/avatars/img2.jpg'}
-                />
-              </ListItemAvatar>
-              <ListItemText
-                primary={'Jhon Anderson'}
-                secondary={'Senior Frontend Developer'}
-              />
+
+          <Typography variant={'h3'} gutterBottom align={'center'}>
+            <Box fontWeight={700} component={'span'}>
+            Engineering Managers
             </Box>
+          </Typography>
+          <Box
+            component={Typography}
+            variant={'h6'}
+            fontWeight={400}
+            align={'center'}
+            gutterBottom
+          >
+            Offload the tedious task of finding work examples, scanning Jira for projects, searching Slack for participation and more.
+            Let Thinksy collect the data for your engineers’ performance reviews and promotion packets,
+             so you can spend more time writing a thoughtful review.
           </Box>
+
         </Box>
       </Container>
     </Box>

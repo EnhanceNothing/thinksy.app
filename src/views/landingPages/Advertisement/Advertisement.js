@@ -11,13 +11,21 @@ import {
   Platforms,
   Team,
   Pricing,
+  ReviewSection,
 } from './components';
 
 const Advertisement = ({ themeMode }) => {
   const theme = useTheme();
+  const scaledStyles = {
+    fontSize: '90%', // Adjust font size to 90% of the original
+    padding: theme.spacing(0.8), // Adjust padding to 10% less
+    // ... Other style adjustments for components
+  };
+
+
 
   return (
-    <Box>
+    <Box style={scaledStyles}>
       <Box bgcolor={theme.palette.alternate.main} position={'relative'}>
         <Container position="relative" zIndex={2}>
           <Hero />
@@ -45,11 +53,15 @@ const Advertisement = ({ themeMode }) => {
           />
         </Box>
       </Box>
+
+
       <Container>
         <Platforms />
       </Container>
 
-
+      <Container>
+        <ReviewSection />
+      </Container>
 
       <Box bgcolor={theme.palette.alternate.main}>
           <Container>

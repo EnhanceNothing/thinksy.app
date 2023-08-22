@@ -119,7 +119,7 @@ const Pricing = () => {
           },
           {
             title: 'Enterprise',
-            price: '50',
+            price: '24',
             features: [
               {
                 title: 'Unlimited reports',
