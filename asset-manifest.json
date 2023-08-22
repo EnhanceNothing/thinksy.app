@@ -1,16 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.50b0bc5a.css",
-    "main.js": "/static/js/main.547919b8.js",
+    "main.js": "/static/js/main.8884a0a6.js",
     "static/js/522.5ca4d995.chunk.js": "/static/js/522.5ca4d995.chunk.js",
+    "static/media/demo6.mp4": "/static/media/demo6.f5ec0c085dd69398c368.mp4",
     "static/media/eden.jpg": "/static/media/eden.14c2a37b0fa3e80eb15f.jpg",
     "static/media/thinksy-graphic.mp4": "/static/media/thinksy-graphic.8c5f94015130bccb68d9.mp4",
-    "static/media/demo-5.mp4": "/static/media/demo-5.90f652e0fa07c29608eb.mp4",
     "static/media/ai.png": "/static/media/ai.e20dd48abfecc24c152a.png",
-    "static/media/demo2.png": "/static/media/demo2.250fe16a5a2817643c83.png",
+    "static/media/demo2-2.png": "/static/media/demo2-2.686e3b7cd3686c0aee5a.png",
     "static/media/tags.png": "/static/media/tags.b17aec2bf97d71199f08.png",
-    "static/media/demo3.png": "/static/media/demo3.2504738e106c54d38a63.png",
-    "static/media/demo1.png": "/static/media/demo1.c376d6765fcaf8bd77dc.png",
+    "static/media/demo4-1.png": "/static/media/demo4-1.0f34f76e93836fcec1db.png",
+    "static/media/demo3-3.png": "/static/media/demo3-3.f14a7970d37ce804e046.png",
+    "static/media/demo1-2.png": "/static/media/demo1-2.9d8febdf987e9fb00595.png",
     "static/media/vote.png": "/static/media/vote.87b24a7cb46e0c05bccf.png",
     "static/media/add-idea-mock.png": "/static/media/add-idea-mock.3596e7c6a6a91bff52ac.png",
     "static/media/summary.png": "/static/media/summary.f528f76ea94e8d104ceb.png",
@@ -27,6 +28,6 @@
   },
   "entrypoints": [
     "static/css/main.50b0bc5a.css",
-    "static/js/main.547919b8.js"
+    "static/js/main.8884a0a6.js"
   ]
 }
