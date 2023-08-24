@@ -32,14 +32,18 @@ const Hero = () => {
     validationSchema: validationSchema,
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       try {
+        console.log("howdy")
+        const referrer = document.referrer !== '' ? document.referrer : 'direct';
+        console.log(referrer);
         const response = await axios.post(
           'https://api.airtable.com/v0/appvKEFZdedhZN1cg/Thinksy.app%20Waitlist%20SIgnups',
           {
             fields: {
               "Email": values.email,
+              "Referrer": referrer,
               "Tag": [
-                "Warm lead"
-              ]            
+                "Warm lead",
+              ]
             },
           },
           {
@@ -52,7 +56,7 @@ const Hero = () => {
             },
           },
         );
-        
+
         console.log(response.data);
         resetForm();
         setIsSubmitted(true);
