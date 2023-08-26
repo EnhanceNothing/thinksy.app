@@ -40,7 +40,6 @@ const Advertisement = ({ themeMode }) => {
           objectFit: 'cover',
         }}
         controls
-        autoPlay
         muted
         loop
       />
