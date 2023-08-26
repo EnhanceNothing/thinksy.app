@@ -4,6 +4,7 @@ import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Container from 'common/Container';
 import demoVideo from './images/demo6.mp4';
+import thumbnail from './images/infomercial.jpeg'
 
 import {
   Hero,
@@ -31,6 +32,7 @@ const Advertisement = ({ themeMode }) => {
         marginTop={'2%'}
         height={'100%'}
         width={'100%'}
+        poster={thumbnail}
         src={demoVideo}
         alt="..."
         loading="lazy"
