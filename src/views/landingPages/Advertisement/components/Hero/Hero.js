@@ -32,8 +32,7 @@ const Hero = () => {
     validationSchema: validationSchema,
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       try {
-        console.log("howdy")
-        const referrer = document.referrer !== '' ? document.referrer : 'direct';
+        const referrer = document.referrer !== '' ? document.referrer : 'Unknown';
         console.log(referrer);
         const response = await axios.post(
           'https://api.airtable.com/v0/appvKEFZdedhZN1cg/Thinksy.app%20Waitlist%20SIgnups',
@@ -89,9 +88,8 @@ const Hero = () => {
         }}
         controls
         autoPlay
-        muted  
+        muted
         loop
-        playsInline
       />
       </Box>
     );
@@ -191,7 +189,7 @@ const Hero = () => {
           </Box>
         </Box>
       </Grid>
-      <Grid
+      {/* <Grid
         item
         container
         alignItems={'center'}
@@ -202,7 +200,7 @@ const Hero = () => {
       >
 
       <GridItemVideoBlock />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };

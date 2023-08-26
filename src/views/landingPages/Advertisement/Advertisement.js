@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Container from 'common/Container';
-import demoVideo from './images/thinksy-graphic.mp4';
+import demoVideo from './images/demo6.mp4';
+
 import {
   Hero,
   Benefits,
@@ -22,6 +23,30 @@ const Advertisement = ({ themeMode }) => {
     // ... Other style adjustments for components
   };
 
+  const GridItemVideoBlock = () => {
+    return (
+      <Box position={'relative'}>
+        <Box
+        component={'video'}
+        marginTop={'2%'}
+        height={'100%'}
+        width={'100%'}
+        src={demoVideo}
+        alt="..."
+        loading="lazy"
+        boxShadow={4}
+        borderRadius={1.5}
+        sx={{
+          objectFit: 'cover',
+        }}
+        controls
+        autoPlay
+        muted
+        loop
+      />
+      </Box>
+    );
+  };
 
 
   return (
@@ -29,6 +54,7 @@ const Advertisement = ({ themeMode }) => {
       <Box bgcolor={theme.palette.alternate.main} position={'relative'}>
         <Container position="relative" zIndex={2}>
           <Hero />
+          <GridItemVideoBlock />
         </Container>
         <Box
           component={'svg'}
