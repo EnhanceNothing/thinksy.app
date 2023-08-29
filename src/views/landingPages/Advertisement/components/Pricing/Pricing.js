@@ -62,7 +62,7 @@ const Pricing = () => {
                 isIncluded: true,
               },
               {
-                title: 'Up to 4 seats',
+                title: 'Up to 25 seats',
                 isIncluded: true,
               },
               {
@@ -70,11 +70,15 @@ const Pricing = () => {
                 isIncluded: false,
               },
               {
-                title: 'Admin controls',
+                title: 'Ability to run reports on other users',
                 isIncluded: false,
               },
               {
                 title: 'Slack Connect Channel w/ Founders',
+                isIncluded: false,
+              },
+              {
+                title: 'Custom admin controls',
                 isIncluded: false,
               },
               {
@@ -102,12 +106,16 @@ const Pricing = () => {
                 isIncluded: true,
               },
               {
-                title: 'Admin controls',
+                title: 'Ability to run reports on other users',
                 isIncluded: true,
               },
               {
                 title: 'Slack Connect Channel w/ Founders',
                 isIncluded: true,
+              },
+              {
+                title: 'Custom admin controls',
+                isIncluded: false,
               },
               {
                 title: 'Analytics Dashboard',
@@ -135,11 +143,15 @@ const Pricing = () => {
                 isIncluded: true,
               },
               {
-                title: 'Custom admin controls',
+                title: 'Ability to run reports on other users',
                 isIncluded: true,
               },
               {
                 title: 'Slack Connect Channel w/ Founders',
+                isIncluded: true,
+              },
+              {
+                title: 'Custom admin controls',
                 isIncluded: true,
               },
               {
