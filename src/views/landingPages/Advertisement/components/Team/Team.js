@@ -16,6 +16,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedinIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
 import edenImg from './images/eden.jpg';
 import calliImg from './images/calli.jpg';
 import {ReactComponent as UnderlineSVG} from './images/words-line.svg';
@@ -102,6 +103,7 @@ const Team = () => {
             twitter :'https://twitter.com/callifuch',
             producthunt: 'https://www.producthunt.com/@calli_fuchigami',
             about: 'Calli has spent her career as a Finance Manager working with game studios, startups and small businesses keeping money operations efficient and organized.\nShe is definitely NOT type-A',
+            email: 'calli@enhancenothing.com'
           },
           {
             name: 'Eden',
@@ -111,8 +113,9 @@ const Team = () => {
             github: 'https://github.com/edeng',
             linkedin: 'https://www.linkedin.com/in/edenghirmai/',
             producthunt: 'https://www.producthunt.com/@entreeden',
+            email: 'eden@enhancenothing.com',
             about: 'Eden is a Staff Engineer at Slack and an Ex-Google engineer.\nHe\'s currently building software and a chicken coop for his backyard.',
-          },        
+          },
         ].map((item, i) => (
           <Grid item xs={12} sm={12} md={6} key={i} sx={{
             marginLeft: i === 0 ? 'auto' : undefined,
@@ -182,11 +185,24 @@ const Team = () => {
                           onClick={() => window.open(item.linkedin)}
                           size={'small'}
                           sx={{
+                            marginRight: 1,
                             color: colors.blueGrey[200],
                           }}
                         >
                           <LinkedinIcon />
                         </IconButton>
+                      )}
+                      {item.email && (
+                        <a href={`mailto:${item.email}`}>
+                          <IconButton
+                            size={'small'}
+                            sx={{
+                              color: colors.blueGrey[200],
+                            }}
+                          >
+                            <EmailIcon />
+                          </IconButton>
+                        </a>
                       )}
                     </Box>
                   </Box>
@@ -265,7 +281,7 @@ const Team = () => {
                   disabled={formik.isSubmitting}
                   type="submit"
                 >
-                  Get early access
+                  Subscribe
                 </Box>
               </Box>
             </Box>

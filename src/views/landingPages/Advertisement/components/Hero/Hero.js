@@ -181,7 +181,7 @@ const Hero = () => {
                   disabled={formik.isSubmitting}
                   type="submit"
                 >
-                  Get early access
+                  Subscribe
                 </Box>                
               </Box>
             </Box>

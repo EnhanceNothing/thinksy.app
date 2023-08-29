@@ -31,7 +31,7 @@ const Pricing = () => {
           color={'secondary'}
           align={'center'}
         >
-          Join our journey
+          Pricing
         </Typography>
         <Box
           component={Typography}
@@ -40,7 +40,7 @@ const Pricing = () => {
           align={'center'}
           gutterBottom
         >
-          Become an Early Adopter
+          Pick the best plan based on your team
         </Box>
         <Typography
           variant={'h6'}
@@ -48,21 +48,17 @@ const Pricing = () => {
           color={'textSecondary'}
           align={'center'}
         >
-          Pricing exclusive to our early access signups.
+          30-day money back guarantee. No questions asked.
         </Typography>
       </Box>
       <Grid container spacing={4}>
         {[
           {
-            title: 'Basic',
-            price: '6',
+            title: 'Standard',
+            price: '50',
             features: [
               {
-                title: 'Unlimited reports',
-                isIncluded: true,
-              },
-              {
-                title: 'Unlimited integrations',
+                title: '3 integrations',
                 isIncluded: true,
               },
               {
@@ -74,11 +70,15 @@ const Pricing = () => {
                 isIncluded: false,
               },
               {
-                title: 'Custom admin controls',
+                title: 'Admin controls',
                 isIncluded: false,
               },
               {
-                title: 'Custom report prompts',
+                title: 'Slack Connect Channel w/ Founders',
+                isIncluded: false,
+              },
+              {
+                title: 'Analytics Dashboard',
                 isIncluded: false,
               },
             ],
@@ -87,18 +87,14 @@ const Pricing = () => {
           },
           {
             title: 'Premium',
-            price: '12',
+            price: '80',
             features: [
               {
-                title: 'Unlimited reports',
+                title: '10 integrations',
                 isIncluded: true,
               },
               {
-                title: 'Unlimited integrations',
-                isIncluded: true,
-              },
-              {
-                title: 'Up to 30 seats',
+                title: 'Up to 100 seats',
                 isIncluded: true,
               },
               {
@@ -106,11 +102,15 @@ const Pricing = () => {
                 isIncluded: true,
               },
               {
-                title: 'Custom admin controls',
-                isIncluded: false,
+                title: 'Admin controls',
+                isIncluded: true,
               },
               {
-                title: 'Custom report prompts',
+                title: 'Slack Connect Channel w/ Founders',
+                isIncluded: true,
+              },
+              {
+                title: 'Analytics Dashboard',
                 isIncluded: false,
               },
             ],
@@ -121,10 +121,7 @@ const Pricing = () => {
             title: 'Enterprise',
             price: '24',
             features: [
-              {
-                title: 'Unlimited reports',
-                isIncluded: true,
-              },
+
               {
                 title: 'Unlimited integrations',
                 isIncluded: true,
@@ -142,7 +139,11 @@ const Pricing = () => {
                 isIncluded: true,
               },
               {
-                title: 'Custom report prompts',
+                title: 'Slack Connect Channel w/ Founders',
+                isIncluded: true,
+              },
+              {
+                title: 'Analytics Dashboard',
                 isIncluded: true,
               },
             ],
@@ -173,23 +174,19 @@ const Pricing = () => {
                     </Box>
                   </Typography>
                   <Box display={'flex'} alignItems={'flex-start'}>
-                    <Typography variant={'h4'} color={'primary'}>
-                      <Box
-                        component={'span'}
-                        fontWeight={600}
-                        marginRight={1 / 2}
-                      >
-                        $
-                      </Box>
-                    </Typography>
-                    <Typography variant={'h2'} color={'primary'} gutterBottom>
-                      <Box component={'span'} fontWeight={600}>
-                        {item.price}
-                      </Box>
-                    </Typography>
+                  <Typography variant={'h4'} color={'primary'}>
+                    <Box component={'span'} fontWeight={600} marginRight={1 / 2}>
+                      {i === 2 ? '' : '$'}
+                    </Box>
+                  </Typography>
+                  <Typography variant={'h3'}  color={'primary'} gutterBottom>
+                    <Box component={'span'} fontWeight={600}>
+                      {i === 2 ? 'Contact Us' : item.price}
+                    </Box>
+                  </Typography>
                   </Box>
                   <Typography variant={'subtitle2'} color={'textSecondary'}>
-                    Per user, per month
+                  Per user, per month
                   </Typography>
                 </Box>
                 <Grid container spacing={1}>

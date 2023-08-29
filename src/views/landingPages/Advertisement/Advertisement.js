@@ -8,7 +8,7 @@ import thumbnail from './images/infomercial.jpeg'
 
 import {
   Hero,
-  Benefits,
+  Banner,
   Headline,
   Platforms,
   Team,
@@ -18,11 +18,6 @@ import {
 
 const Advertisement = ({ themeMode }) => {
   const theme = useTheme();
-  const scaledStyles = {
-    fontSize: '90%', // Adjust font size to 90% of the original
-    padding: theme.spacing(0.8), // Adjust padding to 10% less
-    // ... Other style adjustments for components
-  };
 
   const GridItemVideoBlock = () => {
     return (
@@ -30,9 +25,11 @@ const Advertisement = ({ themeMode }) => {
         <Box
         component={'video'}
         marginTop={'2%'}
-        height={'100%'}
-        width={'100%'}
-        poster={thumbnail}
+        marginLeft={'10%'}
+        marginRight={'10%'}
+        height={'80%'}
+        width={'80%'}
+        // poster={thumbnail}
         src={demoVideo}
         alt="..."
         loading="lazy"
@@ -51,11 +48,10 @@ const Advertisement = ({ themeMode }) => {
 
 
   return (
-    <Box style={scaledStyles}>
+    <Box>
       <Box bgcolor={theme.palette.alternate.main} position={'relative'}>
         <Container position="relative" zIndex={2}>
           <Hero />
-          <GridItemVideoBlock />
         </Container>
         <Box
           component={'svg'}
@@ -81,6 +77,9 @@ const Advertisement = ({ themeMode }) => {
         </Box>
       </Box>
 
+      <Container>
+        <GridItemVideoBlock />
+      </Container>
 
       <Container>
         <Platforms />
