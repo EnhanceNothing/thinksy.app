@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.50b0bc5a.css",
-    "main.js": "/static/js/main.95a11d63.js",
+    "main.js": "/static/js/main.d2122107.js",
     "static/js/522.5ca4d995.chunk.js": "/static/js/522.5ca4d995.chunk.js",
     "static/media/demo6.mp4": "/static/media/demo6.f5ec0c085dd69398c368.mp4",
     "static/media/eden.jpg": "/static/media/eden.14c2a37b0fa3e80eb15f.jpg",
@@ -9,7 +9,7 @@
     "static/media/infomercial.jpeg": "/static/media/infomercial.9a0e5a20a7bea13ab228.jpeg",
     "static/media/demo2-2.png": "/static/media/demo2-2.686e3b7cd3686c0aee5a.png",
     "static/media/tags.png": "/static/media/tags.b17aec2bf97d71199f08.png",
-    "static/media/demo4-1.png": "/static/media/demo4-1.0f34f76e93836fcec1db.png",
+    "static/media/demo4-1.png": "/static/media/demo4-1.35da47c616aa02b115fd.png",
     "static/media/demo3-3.png": "/static/media/demo3-3.f14a7970d37ce804e046.png",
     "static/media/demo1-2.png": "/static/media/demo1-2.9d8febdf987e9fb00595.png",
     "static/media/vote.png": "/static/media/vote.87b24a7cb46e0c05bccf.png",
@@ -28,6 +28,6 @@
   },
   "entrypoints": [
     "static/css/main.50b0bc5a.css",
-    "static/js/main.95a11d63.js"
+    "static/js/main.d2122107.js"
   ]
 }
