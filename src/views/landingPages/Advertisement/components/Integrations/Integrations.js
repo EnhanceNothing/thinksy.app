@@ -32,7 +32,7 @@ const Platforms = () => {
           align={'center'}
           gutterBottom
         >
-          We search where you're already working.
+          We search where you're already working
         </Box>
         <Typography
           variant={'h6'}
