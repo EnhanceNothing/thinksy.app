@@ -9,6 +9,8 @@ import thumbnail from './images/infomercial.jpeg'
 import {
   Hero,
   Banner,
+  Faq,
+  Integrations,
   Headline,
   Platforms,
   Team,
@@ -89,6 +91,10 @@ const Advertisement = ({ themeMode }) => {
         <ReviewSection />
       </Container>
 
+      <Container>
+          <Integrations />
+      </Container>
+
       <Box bgcolor={theme.palette.alternate.main}>
           <Container>
             <Pricing />
@@ -98,6 +104,7 @@ const Advertisement = ({ themeMode }) => {
       <Container>
         <Headline />
       </Container>
+
       <Container paddingTop={'0 !important'}>
         <Team />
       </Container>

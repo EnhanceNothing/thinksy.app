@@ -5,3 +5,6 @@ export { default as Platforms } from './Platforms';
 export { default as Pricing } from './Pricing';
 export { default as Headline } from './Headline';
 export { default as Team } from './Team';
+export { default as Banner } from './Banner';
+export { default as Faq } from './Faq';
+export { default as Integrations } from './Integrations';
