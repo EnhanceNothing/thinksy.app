@@ -5,8 +5,9 @@ import Avatar from '@mui/material/Avatar';
 import Grid from '@mui/material/Grid';
 import GithubLogo from './images/github.svg';
 import AtlassianLogo from './images/atlassian.svg';
-import GCalLogo from './images/gcal.svg';
+import GCalLogo from './images/googlecalendar.png';
 import SlackLogo from './images/slack.svg';
+import JiraLogo from './images/jira.svg';
 
 
 const Platforms = () => {
@@ -60,7 +61,7 @@ const Platforms = () => {
             title: 'Jira',
             subtitle:
               'Keep track of all the tickets you\'ve worked on and the bugs you\'ve crushed to show progress on your teams OKRs.',
-            icon: AtlassianLogo,
+            icon: JiraLogo,
           },
           {
             title: 'Google Calendar',
