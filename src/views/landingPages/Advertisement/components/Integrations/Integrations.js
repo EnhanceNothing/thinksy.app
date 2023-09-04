@@ -1,4 +1,5 @@
 import React from 'react';
+import { alpha, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
@@ -11,6 +12,7 @@ import JiraLogo from './images/jira.svg';
 
 
 const Platforms = () => {
+  const theme = useTheme();
   return (
     <Box>
       <Box marginBottom={4}>
@@ -50,28 +52,47 @@ const Platforms = () => {
             subtitle:
               'Select the channels where you work the most and Thinksy will read through your messages and message you were tagged in.',
             icon: SlackLogo,
+            active: true,
           },
           {
             title: 'GitHub',
             subtitle:
               'Thinksy searches Pull Requests, commits, and PR Reviews to find the work you\'ve done and the support you\'ve provided your teammates',
             icon: GithubLogo,
+            active: true,
           },
           {
             title: 'Jira',
             subtitle:
               'Keep track of all the tickets you\'ve worked on and the bugs you\'ve crushed to show progress on your teams OKRs.',
             icon: JiraLogo,
+            active: false,
           },
           {
             title: 'Google Calendar',
             subtitle:
               'See how much time you\'ve spent in meetings so you don\'t miss important highlights like mentorship and leading conversations.',
             icon: GCalLogo,
+            active: false,
           },
         ].map((item, i) => (
-          <Grid item xs={12} md={3} key={i}>
-            <Box width={1} height={'100%'} data-aos={'fade-up'}>
+          <Grid
+            item
+            xs={12}
+            md={3}
+            key={i}
+            padding={2}
+            sx={{
+                backgroundColor: item.active
+                ? 'inherit'
+                : alpha(theme.palette.secondary.main, 0.1)
+              }}
+          >
+            <Box
+              width={1}
+              height={'100%'}
+              data-aos={'fade-up'}
+            >
               <Box
                 display={'flex'}
                 flexDirection={'column'}
@@ -92,6 +113,19 @@ const Platforms = () => {
                 >
                   {item.title}
                 </Typography>
+
+                {!item.active && (
+                  <Typography
+                    variant={'h7'}
+                    gutterBottom
+                    fontWeight={500}
+                    align={'center'}
+                    sx={{ fontStyle: 'italic' }}
+                  >
+                    (coming soon)
+                  </Typography>
+                )}
+
                 <Typography align={'center'} color="textSecondary">
                   {item.subtitle}
                 </Typography>
