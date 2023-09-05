@@ -16,6 +16,19 @@ import Divider from '@mui/material/Divider';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import ToggleButton from '@mui/material/ToggleButton';
 
+function sendEmail(tier) {
+  // Replace the placeholders with your actual email, subject, and body
+  var to = "calli@enhancenothing.com";
+  var subject = "Gimme Thinksy " + tier + "!";
+  var body = "Hey Calli, I'm interested in trying out Thinksy! Can we set up some time for a demo?";
+
+  // Create the mailto link
+  var mailtoLink = "mailto:" + to + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+  // Open the user's default email client
+  window.open(mailtoLink);
+}
+
 const Pricing = () => {
   const theme = useTheme();
 
@@ -86,8 +99,8 @@ const Pricing = () => {
                 isIncluded: false,
               },
             ],
-            isHighlighted: true,
-            btnText: 'Get pro',
+            isHighlighted: false,
+            btnText: 'Get Standard',
           },
           {
             title: 'Premium',
@@ -123,7 +136,7 @@ const Pricing = () => {
               },
             ],
             isHighlighted: true,
-            btnText: 'Contact us',
+            btnText: 'Get Premium',
           },
           {
             title: 'Enterprise',
@@ -220,7 +233,7 @@ const Pricing = () => {
                 </Grid>
               </Box>
               <Box flexGrow={1} />
-              {/* <Box
+              <Box
                 component={CardActions}
                 justifyContent={'center'}
                 padding={4}
@@ -228,10 +241,11 @@ const Pricing = () => {
                 <Button
                   size={'large'}
                   variant={item.isHighlighted ? 'contained' : 'outlined'}
+                  onClick={() => sendEmail(item.title)}
                 >
                   {item.btnText}
                 </Button>
-              </Box> */}
+              </Box>
             </Box>
           </Grid>
         ))}
