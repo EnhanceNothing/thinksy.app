@@ -41,8 +41,8 @@ const Advertisement = ({ themeMode }) => {
           objectFit: 'cover',
         }}
         controls
-        muted
-        loop
+        // muted
+        // loop
       />
       </Box>
     );
