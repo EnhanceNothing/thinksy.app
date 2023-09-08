@@ -4,6 +4,7 @@ import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Container from 'common/Container';
 import thumbnail from './images/infomercial.jpeg'
+import { alpha } from '@mui/material/styles';
 
 import {
   Hero,
@@ -26,6 +27,7 @@ const Advertisement = ({ themeMode }) => {
         <Container position="relative" zIndex={2}>
           <Hero />
         </Container>
+
         <Box
           component={'svg'}
           preserveAspectRatio="none"
@@ -50,17 +52,92 @@ const Advertisement = ({ themeMode }) => {
         </Box>
       </Box>
 
-      <Container>
-        <Demo />
-      </Container>
+      <Box bgcolor={theme.palette.background.paper} position={'relative'}>
+        <Container position="relative" zIndex={2}>
+          <Platforms />
+        </Container>
 
-      <Container>
-        <Platforms />
-      </Container>
+        <Box
+          component={'svg'}
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          viewBox="0 0 1921 273"
+          sx={{
+            position: 'absolute',
+            width: '100%',
+            left: 0,
+            bottom: 0,
+            right: 0,
+            zIndex: 1,
+            height: '35%',
+          }}
+        >
+          <polygon
+            fill={alpha(theme.palette.secondary.main, 0.7)}
+            points="0,273 1921,273 1921,0 "
+          />
+        </Box>
+      </Box>
 
-      <Container>
-        <ReviewSection />
-      </Container>
+      <Box bgcolor={alpha(theme.palette.secondary.main, 0.7)} position={'relative'}>
+        <Container position="relative" zIndex={2}>
+          <Demo />
+        </Container>
+
+        <Box
+          component={'svg'}
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          viewBox="0 0 1921 273"
+          sx={{
+            position: 'absolute',
+            width: '100%',
+            left: 0,
+            bottom: 0,
+            right: 0,
+            zIndex: 1,
+            height: '35%',
+          }}
+        >
+          <polygon
+            fill={theme.palette.secondary.main}
+            points="0,273 1921,273 1921,0 "
+          />
+        </Box>
+      </Box>
+
+      <Box bgcolor={theme.palette.secondary.main} position={'relative'}>
+        <Container position="relative" zIndex={2}>
+          <ReviewSection />
+        </Container>
+
+        <Box
+          component={'svg'}
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          viewBox="0 0 1921 273"
+          sx={{
+            position: 'absolute',
+            width: '100%',
+            left: 0,
+            bottom: 0,
+            right: 0,
+            zIndex: 1,
+            height: '35%',
+          }}
+        >
+          <polygon
+            fill={theme.palette.secondary.main}
+            points="0,273 1921,273 1921,0 "
+          />
+        </Box>
+      </Box>
 
       <Container>
           <Integrations />
