@@ -17,6 +17,9 @@ import summaryImg from './images/summary.png';
 import demo1 from './images/demo1-2.png';
 import demo2 from './images/demo2-2.png';
 import demo3 from './images/demo3-3.png';
+import connectImg from './images/connect.svg';
+import defineImg from './images/define.svg';
+import doneImg from './images/done.svg';
 import { imageListItemBarClasses } from '@mui/material';
 
 const Platforms = () => {
@@ -51,31 +54,34 @@ const Platforms = () => {
           variant={'h3'}
           align={'center'}
         >
-          Forgot to keep a running list of your accomplishments?<br />
+          A summary of your work,
             <Box component="span" color={theme.palette.secondary.main} sx={{ position: 'relative', display: 'inline-block' }}>
-              Thinksy can help
+            &nbsp;instantly
             </Box>{" "}
         </Box>
       </Box>
       <Grid container spacing={2}>
         {[
           {
-            title: 'Connect the apps you want to use',
+            title: 'CONNECT',
             subtitle:
-              'Plug in your calendar, Jira, GitHub and more to Thinksy without leaving Slack.',
-            icon: demo3,
+              'Plug in your Github, Jira & other apps to Thinksy.',
+            demo: demo3,
+            icon: connectImg
           },
           {
-            title: 'Define the parameters',
+            title: 'DEFINE',
             subtitle:
               'Add Slack channels and a time frame to the scope.',
-            icon: demo1,
+            demo: demo1,
+            icon: defineImg
           },
           {
-            title: 'Get a summary of your work, instantly',
+            title: 'DONE',
             subtitle:
-              'See projects, key contributions, strengths & skills, areas of improvement and more.',
-            icon: demo2,
+              'See projects, technical quality & key contributions & more.',
+            demo: demo2,
+            icon: doneImg
           },
         ].map((item, i) => (
           <Grid item xs={12} md={4} key={i}>
@@ -110,21 +116,25 @@ const Platforms = () => {
                   <Box
                     component={'img'}
                     maxWidth={'100%'}
-                    marginBottom={2}
                     src={item.icon}
                   />
                   <Box
                     component={Typography}
                     variant={'h6'}
                     gutterBottom
-                    fontWeight={500}
+                    fontWeight={800}
                     align={'center'}
                   >
                     {item.title}
                   </Box>
-                  <Typography align={'center'} color="textSecondary">
+                  <Typography marginBottom={2} align={'center'} color="textSecondary">
                     {item.subtitle}
                   </Typography>
+                  <Box
+                    component={'img'}
+                    maxWidth={'100%'}
+                    src={item.demo}
+                  />
                 </Box>
                 <Box flexGrow={1} />
 
