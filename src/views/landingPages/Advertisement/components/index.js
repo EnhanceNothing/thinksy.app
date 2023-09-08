@@ -8,3 +8,4 @@ export { default as Team } from './Team';
 export { default as Banner } from './Banner';
 export { default as Faq } from './Faq';
 export { default as Integrations } from './Integrations';
+export { default as Demo } from './Demo';

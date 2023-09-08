@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Container from 'common/Container';
-import demoVideo from './images/demo6.mp4';
 import thumbnail from './images/infomercial.jpeg'
 
 import {
@@ -16,39 +15,11 @@ import {
   Team,
   Pricing,
   ReviewSection,
+  Demo,
 } from './components';
 
 const Advertisement = ({ themeMode }) => {
   const theme = useTheme();
-
-  const GridItemVideoBlock = () => {
-    return (
-      <Box position={'relative'}>
-        <Box
-        component={'video'}
-        marginTop={'2%'}
-        marginLeft={'10%'}
-        marginRight={'10%'}
-        height={'80%'}
-        width={'80%'}
-        // poster={thumbnail}
-        src={demoVideo}
-        alt="..."
-        loading="lazy"
-        boxShadow={4}
-        borderRadius={1.5}
-        sx={{
-          objectFit: 'cover',
-        }}
-        controls
-        // muted
-        // loop
-      />
-      </Box>
-    );
-  };
-
-
   return (
     <Box>
       <Box bgcolor={theme.palette.alternate.main} position={'relative'}>
@@ -80,7 +51,7 @@ const Advertisement = ({ themeMode }) => {
       </Box>
 
       <Container>
-        <GridItemVideoBlock />
+        <Demo />
       </Container>
 
       <Container>
