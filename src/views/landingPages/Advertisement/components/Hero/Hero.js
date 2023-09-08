@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import { useTheme } from '@mui/material/styles';
+import { alpha, useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -9,8 +9,13 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import addIdeaImg from './images/add-idea-mock.png';
+import Card from '@mui/material/Card';
+import { Link } from '@mui/material';
+import CardContent from '@mui/material/CardContent';
 import {ReactComponent as UnderlineSVG} from './images/words-line.svg';
 import demoVideo from './images/demo6.mp4';
+import calendar from './images/calendar-icon.svg';
+import Avatar from '@mui/material/Avatar';
 import axios from 'axios';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
@@ -22,7 +27,12 @@ const validationSchema = yup.object({
     .required('Email is required'),
 });
 
-const Hero = () => {
+const to = "calli@enhancenothing.com";
+const subject = "Gimme Thinksy!";
+const body = "Hey Calli, I'm interested in trying out Thinksy! Can we set up some time for a demo?";
+const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+const Hero = ({ themeMode = 'light' }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const formik = useFormik({
@@ -101,7 +111,7 @@ const Hero = () => {
 
   return (
     <Grid container spacing={4}>
-      <Grid item xs={12} md={12}>
+      <Grid item xs={12} md={7} paddingBottom={2}>
         <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
           <Box marginBottom={2}>
             <Typography
@@ -181,26 +191,102 @@ const Hero = () => {
                   disabled={formik.isSubmitting}
                   type="submit"
                 >
-                  Subscribe
-                </Box>                
+                  Join the mailing list
+                </Box>
               </Box>
             </Box>
-          </Box>            
+          </Box>
           </Box>
         </Box>
       </Grid>
-      {/* <Grid
-        item
+      <Grid
+        // item
         container
         alignItems={'center'}
         justifyContent={'center'}
         xs={12}
-        md={12}
+        md={5}
         data-aos={isMd ? 'fade-left' : 'fade-up'}
       >
 
-      <GridItemVideoBlock />
-      </Grid> */}
+        <Box padding={{ xs: 1, md: 2, lg: 3 }}>
+            <Box
+              component={Card}
+              boxShadow={{ xs: 1, sm: 3 }}
+              borderRadius={5}
+              height={'100%'}
+              width={'100%'}
+            >
+              <Box
+                component={CardContent}
+                display={'flex'}
+                flexDirection={'column'}
+                alignItems={'center'}
+                padding={{ xs: 2, sm: 4, md: 6 }}
+                sx={{
+                  '&:last-child': {
+                    paddingBottom: { xs: 2, sm: 4, md: 6 },
+                  },
+                }}
+              >
+                  <Box
+                    component={Typography}
+                    variant={'h4'}
+                    gutterBottom
+                    fontWeight={500}
+                    align={'center'}
+                    color="text"
+                  >
+                    See for yourself
+                  </Box>
+
+                  <div style={{ display: 'flex', alignItems: 'center', paddingBottom: '20px' }}>
+                    <div>
+                      <img src={calendar} alt="calendar icon" style={{ paddingRight: '10px' }} />
+                    </div>
+                    <div>
+                      <Typography color="textSecondary">
+                        Walk through a live demo <br /> with one of our co-founders
+                      </Typography>
+                    </div>
+                  </div>
+
+                <Link href="https://thinksy.pipedrive.com/scheduler/kW5wODT2/thinksy-demo" target="_blank" underline="none">
+                  <Box
+                    component={Button}
+                    variant="contained"
+                    color={theme.palette.primary.dark}
+                    size="large"
+                    type="submit"
+                    style={{ minWidth: '230px', backgroundColor: theme.palette.secondary.main }}
+                    margin={1}
+                  >
+                    Schedule a Thinksy demo
+                  </Box>
+                </Link>
+
+                <Typography color="textSecondary">
+                  or
+                </Typography>
+
+                <Link href={mailtoLink} target="_blank" underline="none">
+                  <Box
+                    component={Button}
+                    variant="contained"
+                    color={theme.palette.primary.dark}
+                    size="large"
+                    type="submit"
+                    style={{ minWidth: '230px', backgroundColor: alpha(theme.palette.secondary.main, 0.7) }}
+                    margin={1}
+                  >
+                    Get Thinksy today!
+                  </Box>
+                </Link>
+
+              </Box>
+            </Box>
+          </Box>
+      </Grid>
     </Grid>
   );
 };
