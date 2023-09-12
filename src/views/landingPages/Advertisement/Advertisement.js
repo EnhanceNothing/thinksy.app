@@ -169,6 +169,10 @@ const Advertisement = ({ themeMode }) => {
           <Integrations />
       </Container>
 
+      <Container>
+          <Faq />
+      </Container>
+
       <Box bgcolor={theme.palette.alternate.main}>
           <Container>
             <Pricing />
