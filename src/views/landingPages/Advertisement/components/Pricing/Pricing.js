@@ -15,9 +15,20 @@ import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import ToggleButton from '@mui/material/ToggleButton';
+import mixpanel from 'mixpanel-browser';
+
+mixpanel.init("eed12a268b55b342ce4b0044b9ae2814", { track_pageview: true, persistence: 'localStorage' });
+
+const referrer = document.referrer !== '' ? document.referrer : 'Unknown';
 
 function sendEmail(tier) {
   // Replace the placeholders with your actual email, subject, and body
+
+  mixpanel.track('Clicked Get Thinksy Tier Button', {
+    'Referrer': referrer,
+    'Tier': tier
+  })
+
   var to = "calli@enhancenothing.com";
   var subject = "Gimme Thinksy " + tier + "!";
   var body = "Hey Calli, I'm interested in trying out Thinksy! Can we set up some time for a demo?";

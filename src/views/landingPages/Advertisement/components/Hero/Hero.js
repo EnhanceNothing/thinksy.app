@@ -18,6 +18,9 @@ import calendar from './images/calendar-icon.svg';
 import Avatar from '@mui/material/Avatar';
 import axios from 'axios';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import mixpanel from 'mixpanel-browser';
+
+mixpanel.init("eed12a268b55b342ce4b0044b9ae2814", { track_pageview: true, persistence: 'localStorage' });
 
 const validationSchema = yup.object({
   email: yup
@@ -26,6 +29,7 @@ const validationSchema = yup.object({
     .email('Enter a valid email')
     .required('Email is required'),
 });
+const referrer = document.referrer !== '' ? document.referrer : 'Unknown';
 
 const to = "calli@enhancenothing.com";
 const subject = "Gimme Thinksy!";
@@ -41,9 +45,12 @@ const Hero = ({ themeMode = 'light' }) => {
     },
     validationSchema: validationSchema,
     onSubmit: async (values, { setSubmitting, resetForm }) => {
+
+      mixpanel.track('Mailing List Signup', {
+        'Referrer': referrer
+      })
+
       try {
-        const referrer = document.referrer !== '' ? document.referrer : 'Unknown';
-        console.log(referrer);
         const response = await axios.post(
           'https://api.airtable.com/v0/appvKEFZdedhZN1cg/Thinksy.app%20Waitlist%20SIgnups',
           {
@@ -69,7 +76,7 @@ const Hero = ({ themeMode = 'light' }) => {
         console.log(response.data);
         resetForm();
         setIsSubmitted(true);
-        // setTimeout(() => setIsSubmitted(false), 3000); // remove the success message after 3 seconds        
+        // setTimeout(() => setIsSubmitted(false), 3000); // remove the success message after 3 seconds
       } catch (error) {
         console.error('Error adding record to Airtable:', error);
       }
@@ -77,6 +84,18 @@ const Hero = ({ themeMode = 'light' }) => {
       setSubmitting(false);
     },
   });
+
+  const handleDemoClick = () => {
+    mixpanel.track('Clicked Schedule Demo Button', {
+      'Referrer': referrer
+    })
+  };
+
+  const handleGetThinksyClick = () => {
+    mixpanel.track('Clicked Get Thinksy Button', {
+      'Referrer': referrer
+    })
+  };
 
   const theme = useTheme();
 
@@ -177,7 +196,7 @@ const Hero = ({ themeMode = 'light' }) => {
                   value={formik.values.email}
                   onChange={formik.handleChange}
                   error={formik.touched.email && Boolean(formik.errors.email)}
-                  helperText={formik.touched.email && formik.errors.email}                  
+                  helperText={formik.touched.email && formik.errors.email}
                 />
                 <Box
                   component={Button}
@@ -251,18 +270,19 @@ const Hero = ({ themeMode = 'light' }) => {
                     </div>
                   </div>
 
-                <Link href="https://thinksy.pipedrive.com/scheduler/kW5wODT2/thinksy-demo" target="_blank" underline="none">
-                  <Box
-                    component={Button}
-                    variant="contained"
-                    color={theme.palette.primary.dark}
-                    size="large"
-                    type="submit"
-                    style={{ minWidth: '230px', backgroundColor: theme.palette.secondary.main }}
-                    margin={1}
-                  >
-                    Schedule a Thinksy demo
-                  </Box>
+                  <Link href="https://thinksy.pipedrive.com/scheduler/kW5wODT2/thinksy-demo" target="_blank" underline="none">
+                    <Box
+                      component={Button}
+                      variant="contained"
+                      color={theme.palette.primary.dark}
+                      size="large"
+                      type="submit"
+                      style={{ minWidth: '230px', backgroundColor: theme.palette.secondary.main }}
+                      margin={1}
+                      onClick={handleDemoClick}
+                    >
+                      Schedule a Thinksy demo
+                    </Box>
                 </Link>
 
                 <Typography color="textSecondary">
@@ -278,6 +298,7 @@ const Hero = ({ themeMode = 'light' }) => {
                     type="submit"
                     style={{ minWidth: '230px', backgroundColor: alpha(theme.palette.secondary.main, 0.7) }}
                     margin={1}
+                    onClick={handleGetThinksyClick}
                   >
                     Get Thinksy today!
                   </Box>
