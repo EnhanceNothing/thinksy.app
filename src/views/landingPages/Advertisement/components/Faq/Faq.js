@@ -1,11 +1,37 @@
 import React from 'react';
-import { useTheme } from '@mui/material/styles';
+import { alpha, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import mixpanel from 'mixpanel-browser';
+import { Link } from '@mui/material';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+
+
+
+const referrer = document.referrer !== '' ? document.referrer : 'Unknown';
+const handleGetThinksyClick = () => {
+  mixpanel.track('Clicked FAQ Email Button', {
+    'Referrer': referrer
+  })
+};
+
+const handleFaqClick = (title, expanded) => {
+  mixpanel.track('Clicked FAQ Question', {
+    'title': title,
+    'expanded': expanded
+  })
+};
+
+
+const to = "calli@enhancenothing.com";
+const subject = "Gimme Thinksy!";
+const body = "Hey Calli, I'm interested in trying out Thinksy! Can we set up some time for a demo?";
+const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
 const Faq = () => {
   const theme = useTheme();
@@ -21,7 +47,7 @@ const Faq = () => {
           Frequently Asked Questions
         </Box>
       </Box>
-      <Box>
+      <Box marginBottom={4}>
         {[
           {
             title: 'What happens after I sign up for Thinksy?',
@@ -75,6 +101,7 @@ const Faq = () => {
             padding={1}
             marginBottom={i === item.length - 1 ? 0 : 2}
             borderRadius={`${theme.spacing(1)} !important`}
+            onChange={(event, expanded) => handleFaqClick(item.title, expanded)}
             sx={{
               '&::before': {
                 display: 'none',
@@ -94,6 +121,36 @@ const Faq = () => {
           </Box>
         ))}
       </Box>
+      <Grid container spacing={2} justifyContent="center" alignItems="center">
+        <Grid item>
+          <Box
+            component={Typography}
+            fontWeight={700}
+            variant={'h6'}
+            align={'center'}
+            color="textSecondary"
+          >
+            Still have questions?
+          </Box>
+        </Grid>
+        <Grid item>
+          <Link href={mailtoLink} target="_blank" underline="none">
+            <Box
+              component={Button}
+              variant="contained"
+              color={theme.palette.primary.dark}
+              size="large"
+              type="submit"
+              style={{ minWidth: '230px', backgroundColor: theme.palette.secondary.main }}
+              margin={1}
+              onClick={handleGetThinksyClick}
+            >
+              Send us an email
+            </Box>
+          </Link>
+        </Grid>
+    </Grid>
+
     </Box>
   );
 };
