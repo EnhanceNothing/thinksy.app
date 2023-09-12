@@ -46,13 +46,12 @@ const Headline = () => {
               fontWeight: 700,
             }}
           >
-            Performance tools made for <br />
-            software engineers
+            Tools for engineers to exceed
           </Typography>
         </Box>
         <Box>
           <Typography variant="h6" align={'center'} color={'textSecondary'} sx={{ width: { xs: '100%', md: '65%' }, margin:'auto' }}>
-            We’re on a mission to make performance reviews and promotion packets a delightful, not dreadful experience.
+            We’re on a mission to help software engineers reach their career development goals.  We believe key measures and milestones should be a delightful, not dreadful experience.
           </Typography>
         </Box>
       </Box>
