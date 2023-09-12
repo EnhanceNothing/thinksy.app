@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import demoVideo from './images/demo6.mp4';
+import demoVideo from './images/demo7.mp4';
 import {ReactComponent as UnderlineSVG} from './images/words-line.svg';
 
 
