@@ -24,7 +24,7 @@ const referrer = document.referrer !== '' ? document.referrer : 'Unknown';
 function sendEmail(tier) {
   // Replace the placeholders with your actual email, subject, and body
 
-  mixpanel.track('Clicked Get Thinksy Tier Button', {
+  mixpanel.track('Clicked Get Thinksy Button', {
     'Referrer': referrer,
     'Tier': tier
   })
