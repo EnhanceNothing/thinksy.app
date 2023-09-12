@@ -47,7 +47,8 @@ const Hero = ({ themeMode = 'light' }) => {
     onSubmit: async (values, { setSubmitting, resetForm }) => {
 
       mixpanel.track('Mailing List Signup', {
-        'Referrer': referrer
+        'Referrer': referrer,
+        'Location': 'Hero'
       })
 
       try {
@@ -73,7 +74,6 @@ const Hero = ({ themeMode = 'light' }) => {
           },
         );
 
-        console.log(response.data);
         resetForm();
         setIsSubmitted(true);
         // setTimeout(() => setIsSubmitted(false), 3000); // remove the success message after 3 seconds

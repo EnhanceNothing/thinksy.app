@@ -24,6 +24,7 @@ import {ReactComponent as highlightOne} from './images/highlight-1.svg';
 import {ReactComponent as highlightTwo} from './images/highlight-2.svg';
 import axios from 'axios'; 
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import mixpanel from 'mixpanel-browser';
 
 const validationSchema = yup.object({
   email: yup
@@ -33,7 +34,7 @@ const validationSchema = yup.object({
     .required('Email is required'),
 });
 
-
+const referrer = document.referrer !== '' ? document.referrer : 'Unknown';
 const Team = () => {
   const theme = useTheme();
 
@@ -45,15 +46,22 @@ const Team = () => {
     },
     validationSchema: validationSchema,
     onSubmit: async (values, { setSubmitting, resetForm }) => {
+
+      mixpanel.track('Mailing List Signup', {
+        'Referrer': referrer,
+        'Location': 'Footer'
+      })
+
       try {
         const response = await axios.post(
           'https://api.airtable.com/v0/appvKEFZdedhZN1cg/Thinksy.app%20Waitlist%20SIgnups',
           {
             fields: {
               "Email": values.email,
+              "Referrer": referrer,
               "Tag": [
-                "Warm lead"
-              ]            
+                "Warm lead",
+              ]
             },
           },
           {
@@ -66,8 +74,7 @@ const Team = () => {
             },
           },
         );
-        
-        console.log(response.data);
+
         resetForm();
         setIsSubmitted(true);
         // setTimeout(() => setIsSubmitted(false), 3000); // remove the success message after 3 seconds        
@@ -281,7 +288,7 @@ const Team = () => {
                   disabled={formik.isSubmitting}
                   type="submit"
                 >
-                  Subscribe
+                  Join the mailing list
                 </Box>
               </Box>
             </Box>
