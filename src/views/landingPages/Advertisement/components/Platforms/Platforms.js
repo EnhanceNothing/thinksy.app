@@ -17,9 +17,9 @@ import summaryImg from './images/summary.png';
 import demo1 from './images/demo1-2.png';
 import demo2 from './images/demo2-2.png';
 import demo3 from './images/demo3-3.png';
-import connectImg from './images/connect.svg';
-import defineImg from './images/define.svg';
-import doneImg from './images/done.svg';
+import connectImg from './images/connect.png';
+import defineImg from './images/define.png';
+import doneImg from './images/done.png';
 import { imageListItemBarClasses } from '@mui/material';
 
 const Platforms = () => {
@@ -116,6 +116,7 @@ const Platforms = () => {
                   <Box
                     component={'img'}
                     maxWidth={'100%'}
+                    maxHeight={'80px'}
                     src={item.icon}
                   />
                   <Box
