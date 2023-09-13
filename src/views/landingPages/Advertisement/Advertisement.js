@@ -75,13 +75,13 @@ const Advertisement = ({ themeMode }) => {
           }}
         >
           <polygon
-            fill="#FFDE59"
+            fill={theme.palette.background.paper}
             points="0,273 1921,273 1921,0 "
           />
         </Box>
       </Box>
 
-      <Box bgcolor="#FFDE59" position={'relative'}>
+      <Box bgcolor={theme.palette.background.paper} position={'relative'}>
         <Container position="relative" zIndex={2}>
           <Demo />
         </Container>
@@ -104,13 +104,13 @@ const Advertisement = ({ themeMode }) => {
           }}
         >
           <polygon
-            fill="#FFDE59"
+            fill={theme.palette.alternate.main}
             points="0,273 1921,273 1921,0 "
           />
         </Box>
       </Box>
 
-      <Box bgcolor="#FFDE59" position={'relative'}>
+      <Box bgcolor={theme.palette.alternate.main} position={'relative'}>
         <Container position="relative" zIndex={2}>
           <ReviewSection />
         </Container>
@@ -133,7 +133,7 @@ const Advertisement = ({ themeMode }) => {
           }}
         >
           <polygon
-            fill="#FFDE59"
+            fill={theme.palette.alternate.main}
             points="0,273 1921,273 1921,0 "
           />
 
@@ -157,7 +157,7 @@ const Advertisement = ({ themeMode }) => {
           }}
         >
 <polygon
-  fill="#FFDE59"
+  fill={theme.palette.alternate.main}
   points="0,0 1921,0 1921,273 "
 />
 

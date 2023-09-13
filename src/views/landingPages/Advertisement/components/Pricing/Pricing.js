@@ -64,7 +64,7 @@ const Pricing = () => {
           align={'center'}
           gutterBottom
         >
-          Pick the best plan based on your team
+          Plans for every engineer
         </Box>
         <Typography
           variant={'h6'}
@@ -72,7 +72,7 @@ const Pricing = () => {
           color={'textSecondary'}
           align={'center'}
         >
-          30-day money back guarantee. No questions asked.
+          All Thinksy plans are backed by a 30-day money back guarantee.
         </Typography>
       </Box>
       <Grid container spacing={4}>
