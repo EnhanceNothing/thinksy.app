@@ -110,7 +110,7 @@ const Team = () => {
             twitter :'https://twitter.com/callifuch',
             producthunt: 'https://www.producthunt.com/@calli_fuchigami',
             about: 'Calli has spent her career as a Finance Manager working with game studios, startups and small businesses keeping money operations efficient and organized.\nShe is definitely NOT type-A',
-            email: 'calli@enhancenothing.com'
+            email: 'calli@thinksy.app'
           },
           {
             name: 'Eden',
@@ -120,7 +120,7 @@ const Team = () => {
             github: 'https://github.com/edeng',
             linkedin: 'https://www.linkedin.com/in/edenghirmai/',
             producthunt: 'https://www.producthunt.com/@entreeden',
-            email: 'eden@enhancenothing.com',
+            email: 'eden@thinksy.app',
             about: 'Eden is a Staff Engineer at Slack and an Ex-Google engineer.\nHe\'s currently building software and a chicken coop for his backyard.',
           },
         ].map((item, i) => (

@@ -28,7 +28,7 @@ const handleFaqClick = (title, expanded) => {
 };
 
 
-const to = "calli@enhancenothing.com";
+const to = "calli@thinksy.app";
 const subject = "Gimme Thinksy!";
 const body = "Hey Calli, I'm interested in trying out Thinksy! Can we set up some time for a demo?";
 const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;

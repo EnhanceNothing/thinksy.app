@@ -8,7 +8,8 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import ListItemText from '@mui/material/ListItemText';
 import Container from 'common/Container';
-import ReviewSummary from './images/demo4-1.png';
+import PromoSummary from './images/demo4-1.png';
+import ReviewSummary from './images/demo5.png';
 import { Grid } from '@mui/material';
 
 const ReviewSection = () => {
@@ -106,16 +107,29 @@ const ReviewSection = () => {
             Let Thinksy <strong>collect & organize</strong> examples of your work so you can get to the next level <br /><br />
             </Box>
           </Typography>
-          <Box
-            component={Typography}
-            variant={'h6'}
-            fontWeight={400}
-            align={'center'}
-            gutterBottom
-          >
-            Save hours going back through your Jira, Github, Slack and other apps to find examples of your work.
-            Just ask Thinksy to look for skills demonstrated, release posts, complicated PRs and more -- all while hyperlinking all that work right into your review.
-          </Box>
+
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={6}>
+              <Box
+                      component={'img'}
+                      maxWidth={'100%'}
+                      marginBottom={2}
+                      src={PromoSummary}
+              />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box
+                component={Typography}
+                variant={'h6'}
+                fontWeight={400}
+                align={'center'}
+                gutterBottom
+              >
+                Save hours going back through your Jira, Github, Slack and other apps to find examples of your work.
+                Just ask Thinksy to look for skills demonstrated, release posts, complicated PRs and more -- all while hyperlinking all that work right into your review.
+              </Box>
+            </Grid>
+          </Grid>
 
           <Typography variant={'h3'} gutterBottom align={'center'}>
             <Box fontWeight={700} component={'span'}>
