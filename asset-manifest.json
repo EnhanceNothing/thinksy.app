@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.50b0bc5a.css",
-    "main.js": "/static/js/main.c55d7582.js",
+    "main.js": "/static/js/main.4cb0d96e.js",
     "static/js/522.5ca4d995.chunk.js": "/static/js/522.5ca4d995.chunk.js",
     "static/media/demo6.mp4": "/static/media/demo6.f5ec0c085dd69398c368.mp4",
     "static/media/demo7.mp4": "/static/media/demo7.5c165b2a9e6770607c2b.mp4",
@@ -19,8 +19,12 @@
     "static/media/connect.png": "/static/media/connect.caaddcf8ae0c7bca7be2.png",
     "static/media/summary.png": "/static/media/summary.f528f76ea94e8d104ceb.png",
     "static/media/calendar-icon.svg": "/static/media/calendar-icon.a821a0f40bcefdc7ff3bf59e3710cb5c.svg",
+    "static/media/feather.png": "/static/media/feather.a58cedf1f4089f9c9cb4.png",
     "static/media/done.png": "/static/media/done.2b0cf8df693e3d23ae25.png",
+    "static/media/hourglass.png": "/static/media/hourglass.4357c9bb31995e74b059.png",
+    "static/media/piggy.png": "/static/media/piggy.0da7f1357cc360d6817f.png",
     "static/media/define.png": "/static/media/define.1faeebd10c6d8ef779b6.png",
+    "static/media/graph.png": "/static/media/graph.5b24d15147b3fbb8e3b4.png",
     "static/media/yay-frog-blep.gif": "/static/media/yay-frog-blep.d2c2d0716a770f46d09c.gif",
     "static/media/icon-text-2.svg": "/static/media/icon-text-2.a5a756bf334674b5c207e8ce2a5b2a57.svg",
     "index.html": "/index.html",
@@ -38,6 +42,6 @@
   },
   "entrypoints": [
     "static/css/main.50b0bc5a.css",
-    "static/js/main.c55d7582.js"
+    "static/js/main.4cb0d96e.js"
   ]
 }
