@@ -9,3 +9,4 @@ export { default as Banner } from './Banner';
 export { default as Faq } from './Faq';
 export { default as Integrations } from './Integrations';
 export { default as Demo } from './Demo';
+export { default as Manager } from './Manager';

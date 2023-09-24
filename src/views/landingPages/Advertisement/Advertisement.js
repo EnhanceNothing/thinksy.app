@@ -17,7 +17,9 @@ import {
   Pricing,
   ReviewSection,
   Demo,
+  Manager
 } from './components';
+import { Man } from '@mui/icons-material';
 
 const Advertisement = ({ themeMode }) => {
   const theme = useTheme();
@@ -171,6 +173,10 @@ const Advertisement = ({ themeMode }) => {
 
       <Container>
           <Faq />
+      </Container>
+
+      <Container>
+          <Manager />
       </Container>
 
       <Box bgcolor={theme.palette.alternate.main}>
