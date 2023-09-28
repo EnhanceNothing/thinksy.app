@@ -60,7 +60,7 @@ const Platforms = () => {
             icon: Feather,
           },
           {
-            title: 'Scaleable',
+            title: 'Scalable',
             subtitle:
               'Add additional users on a per-seat basis with no long term contracts and easy month-to-month billing',
             icon: Graph,
