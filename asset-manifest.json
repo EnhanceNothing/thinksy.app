@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.50b0bc5a.css",
-    "main.js": "/static/js/main.915dc8f8.js",
+    "main.js": "/static/js/main.caa2a89e.js",
     "static/js/522.5ca4d995.chunk.js": "/static/js/522.5ca4d995.chunk.js",
     "static/media/demo6.mp4": "/static/media/demo6.f5ec0c085dd69398c368.mp4",
     "static/media/demo7.mp4": "/static/media/demo7.5c165b2a9e6770607c2b.mp4",
@@ -36,12 +36,13 @@
     "static/media/jira.svg": "/static/media/jira.21a234dad72a48f1357d262f8be8ffff.svg",
     "static/media/github.svg": "/static/media/github.6fa18895f6e6c7772cab7049f7e05f59.svg",
     "static/media/atlassian.svg": "/static/media/atlassian.3f88d1262096e7d8df82da10801b7279.svg",
+    "static/media/asana.svg": "/static/media/asana.e88487be5bd0449f46696acf04038dbb.svg",
     "static/media/highlight-1.svg": "/static/media/highlight-1.c85b91f9c4a58796b4e866c8292ddf3b.svg",
     "static/media/highlight-2.svg": "/static/media/highlight-2.fa6a1b142ed776ac0a45cec5ebe461b7.svg",
     "static/media/words-line.svg": "/static/media/words-line.71c316f0b34149c1da65854b1063be7b.svg"
   },
   "entrypoints": [
     "static/css/main.50b0bc5a.css",
-    "static/js/main.915dc8f8.js"
+    "static/js/main.caa2a89e.js"
   ]
 }
