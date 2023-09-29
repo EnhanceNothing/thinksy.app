@@ -72,7 +72,7 @@ const Faq = () => {
           {
             title: 'How do I know my data is secure with Thinksy?',
             subtitle:
-              'We take the security of your data very seriously. Please email our CTO for details on how we keep your data safe eden@enhancenothing.com',
+              'We take the security of your data very seriously. Please email our CTO for details on how we keep your data safe eden@thinksy.app',
           },
           {
             title: 'How does Thinksy work?',
