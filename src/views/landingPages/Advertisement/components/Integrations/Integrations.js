@@ -9,6 +9,7 @@ import AtlassianLogo from './images/atlassian.svg';
 import GCalLogo from './images/googlecalendar.png';
 import SlackLogo from './images/slack.svg';
 import JiraLogo from './images/jira.svg';
+import AsanaLogo from './images/asana.svg';
 
 
 const Platforms = () => {
@@ -62,6 +63,13 @@ const Platforms = () => {
             active: true,
           },
           {
+            title: 'Asana',
+            subtitle:
+            'Keep track of all the tasks you\'ve worked on and the bugs you\'ve crushed to show progress on your teams goals.',
+            icon: AsanaLogo,
+            active: false,
+          },
+          {
             title: 'Jira',
             subtitle:
               'Keep track of all the tickets you\'ve worked on and the bugs you\'ve crushed to show progress on your teams OKRs.',
@@ -79,7 +87,7 @@ const Platforms = () => {
           <Grid
             item
             xs={12}
-            md={3}
+            md={2.4}
             key={i}
             padding={2}
             sx={{
@@ -99,7 +107,7 @@ const Platforms = () => {
                 alignItems={'center'}
               >
                 <Box
-                  component={Avatar}
+                  component={'img'}
                   width={90}
                   height={90}
                   marginBottom={2}
