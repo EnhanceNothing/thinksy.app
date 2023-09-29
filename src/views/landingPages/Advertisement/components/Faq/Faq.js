@@ -67,7 +67,7 @@ const Faq = () => {
           {
             title: 'What is your money back guarantee?',
             subtitle:
-              'If you are not satisfied with Thinksy, we will refund you for the amount you paid for Thinksy up to three (3) months. To help us learn & grow as a company we will request an exist interview so we can continually improve.',
+              'If you are not satisfied with Thinksy, we will refund you for the amount you paid for Thinksy up to three (3) months. To help us learn & grow as a company we will request an exit interview so we can continually improve.',
           },
           {
             title: 'How do I know my data is secure with Thinksy?',
