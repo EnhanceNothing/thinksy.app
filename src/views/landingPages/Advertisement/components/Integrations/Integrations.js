@@ -67,7 +67,7 @@ const Platforms = () => {
             subtitle:
             'Keep track of all the tasks you\'ve worked on and the bugs you\'ve crushed to show progress on your teams goals.',
             icon: AsanaLogo,
-            active: false,
+            active: true,
           },
           {
             title: 'Jira',
