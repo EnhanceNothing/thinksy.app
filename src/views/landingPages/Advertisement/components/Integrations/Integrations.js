@@ -7,9 +7,12 @@ import Grid from '@mui/material/Grid';
 import GithubLogo from './images/github.svg';
 import AtlassianLogo from './images/atlassian.svg';
 import GCalLogo from './images/googlecalendar.png';
+import LinearLogo from './images/linear.png';
 import SlackLogo from './images/slack.svg';
 import JiraLogo from './images/jira.svg';
 import AsanaLogo from './images/asana.svg';
+import GitLabLogo from './images/gitlab.png';
+import BitbucketLogo from './images/bitbucket.svg';
 
 
 const Platforms = () => {
@@ -70,10 +73,24 @@ const Platforms = () => {
             active: true,
           },
           {
+            title: 'Linear',
+            subtitle:
+            'Keep track of all the tasks you\'ve worked on and the bugs you\'ve crushed to show progress on your teams goals.',
+            icon: LinearLogo,
+            active: true,
+          },
+          {
             title: 'Jira',
             subtitle:
               'Keep track of all the tickets you\'ve worked on and the bugs you\'ve crushed to show progress on your teams OKRs.',
             icon: JiraLogo,
+            active: false,
+          },
+          {
+          title: 'Bitbucket',
+            subtitle:
+            'Thinksy searches merge requests, commits, and Reviews to find the work you\'ve done and the support you\'ve provided your teammates',
+            icon: BitbucketLogo,
             active: false,
           },
           {
@@ -83,11 +100,18 @@ const Platforms = () => {
             icon: GCalLogo,
             active: false,
           },
+          {
+          title: 'GitLab',
+            subtitle:
+            'Thinksy searches merge requests, commits, and Reviews to find the work you\'ve done and the support you\'ve provided your teammates',
+            icon: GitLabLogo,
+            active: false,
+          },
         ].map((item, i) => (
           <Grid
             item
             xs={12}
-            md={2.4}
+            md={3}
             key={i}
             padding={2}
             sx={{
