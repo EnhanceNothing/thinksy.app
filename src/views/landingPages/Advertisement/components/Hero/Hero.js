@@ -160,7 +160,7 @@ const Hero = ({ themeMode = 'light' }) => {
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="textSecondary">
-            Say goodbye to manual write ups. Let Thinksy compile a concise list of what you’ve worked on for your next daily stand up, weekly update, or performance review.
+            Say goodbye to manual write ups. Let Thinksy compile a concise list of what you’ve worked on for your next daily standup, weekly update, or performance review.
             </Typography>
           </Box>
           <Box
