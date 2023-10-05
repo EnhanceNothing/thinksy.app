@@ -220,15 +220,7 @@ const Team = () => {
 
         ))}
       </Grid>
-      <Box
-            component={Typography}
-            fontWeight={700}
-            variant={'h3'}
-            padding={5}
-            align={'center'}
-          >
-            Save hours compiling data for your next performance review 💡
-          </Box>
+
       <Box
             display="flex"
             flexDirection={'column'}

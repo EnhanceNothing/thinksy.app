@@ -2,9 +2,23 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import demoVideo from './images/demo8.mp4';
 import {ReactComponent as UnderlineSVG} from './images/words-line.svg';
+import { Link } from '@mui/material';
+import Button from '@mui/material/Button';
+import { alpha, useTheme } from '@mui/material/styles';
+import mixpanel from 'mixpanel-browser';
+
+mixpanel.init("eed12a268b55b342ce4b0044b9ae2814", { track_pageview: true, persistence: 'localStorage' });
 
 
 const Demo = () => {
+    const theme = useTheme();
+
+    const handleDemoClick = () => {
+        mixpanel.track('Clicked Schedule Demo Button', {
+            'Referrer': document.referrer !== '' ? document.referrer : 'Unknown'
+        })
+    };
+
     return (
         <Box position={'relative'}>
             <Box marginBottom={2} position="relative">
@@ -54,6 +68,30 @@ const Demo = () => {
             // muted
             // loop
         />
+
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px 0 0 0' }}>
+            <div style={{ paddingRight: '20px' }}>
+                <Typography color="textSecondary" align='center'>
+                Want to see more? Walk through a live <br /> demo with one of our co-founders
+                </Typography>
+            </div>
+
+
+            <Link href="https://thinksy.pipedrive.com/scheduler/kW5wODT2/thinksy-demo" target="_blank" underline="none">
+                <Box
+                    component={Button}
+                    variant="contained"
+                    color={theme.palette.primary.dark}
+                    size="large"
+                    type="submit"
+                    style={{ minWidth: '230px', backgroundColor: theme.palette.secondary.main }}
+                    margin={1}
+                    onClick={handleDemoClick}
+                >
+                    Schedule a Thinksy demo
+                </Box>
+            </Link>
+        </div>
 
         </Box>
     );

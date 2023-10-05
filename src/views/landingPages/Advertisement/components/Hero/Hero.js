@@ -44,7 +44,7 @@ const SlackButton = () => (
       <path d="M97 45.2c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9-5.8 12.9-12.9 12.9H97V45.2zm-6.5 0c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V12.9C64.7 5.8 70.5 0 77.6 0s12.9 5.8 12.9 12.9v32.3z" fill="#2eb67d"></path>
       <path d="M77.6 97c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9-12.9-5.8-12.9-12.9V97h12.9zm0-6.5c-7.1 0-12.9-5.8-12.9-12.9s5.8-12.9 12.9-12.9h32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H77.6z" fill="#ecb22e"></path>
     </svg>
-    Try Thinksy today!
+    Try Thinksy for free!
   </a>
 );
 
@@ -146,7 +146,7 @@ const Hero = ({ themeMode = 'light' }) => {
         <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
           <Box marginBottom={2}>
             <Typography
-              variant="h2"
+              variant="h3"
               color="textPrimary"
               sx={{ fontWeight: 700 }}
             >
@@ -155,12 +155,12 @@ const Hero = ({ themeMode = 'light' }) => {
                 hours
                 <Box component={UnderlineSVG} sx={{ position: 'absolute', left: '-1px', bottom: '-10px', width: '100%',  zIndex: -1 }}/>
               </Box>{" "}
-              compiling data for your next performance review
+              summarizing your work
             </Typography>
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="textSecondary">
-            Thinksy is a Slack app that helps engineers and their managers automatically summarize their work across JIRA, GitHub and Google Calendar for a faster, painless performance review and promotion process.
+            Say goodbye to manual write ups. Let Thinksy compile a concise list of what you’ve worked on for your next daily stand up, weekly update, or performance review.
             </Typography>
           </Box>
           <Box
@@ -272,17 +272,17 @@ const Hero = ({ themeMode = 'light' }) => {
                   </Box>
 
                   <div style={{ display: 'flex', alignItems: 'center', paddingBottom: '20px' }}>
-                    <div>
+                    {/* <div>
                       <img src={calendar} alt="calendar icon" style={{ paddingRight: '10px' }} />
-                    </div>
+                    </div> */}
                     <div>
-                      <Typography color="textSecondary">
-                        Walk through a live demo <br /> with one of our co-founders
+                      <Typography color="textSecondary" align='center'>
+                      Discover effortless work <br /> summaries today
                       </Typography>
                     </div>
                   </div>
 
-                  <Link href="https://thinksy.pipedrive.com/scheduler/kW5wODT2/thinksy-demo" target="_blank" underline="none">
+                  {/* <Link href="https://thinksy.pipedrive.com/scheduler/kW5wODT2/thinksy-demo" target="_blank" underline="none">
                     <Box
                       component={Button}
                       variant="contained"
@@ -299,9 +299,14 @@ const Hero = ({ themeMode = 'light' }) => {
 
                 <Typography color="textSecondary">
                   or
-                </Typography>
+                </Typography> */}
 
                 <SlackButton />
+
+
+                <Typography color="textSecondary" marginTop={'20px'}>
+                  No payment required
+                </Typography>
 
               </Box>
             </Box>

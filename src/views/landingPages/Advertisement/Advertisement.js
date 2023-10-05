@@ -112,6 +112,11 @@ const Advertisement = ({ themeMode }) => {
         </Box>
       </Box>
 
+      <Container>
+          <Integrations />
+      </Container>
+
+
       <Box bgcolor={theme.palette.alternate.main} position={'relative'}>
         <Container position="relative" zIndex={2}>
           <ReviewSection />
@@ -168,15 +173,11 @@ const Advertisement = ({ themeMode }) => {
       </Box>
 
       <Container>
-          <Integrations />
+          <Manager />
       </Container>
 
       <Container>
           <Faq />
-      </Container>
-
-      <Container>
-          <Manager />
       </Container>
 
       <Box bgcolor={theme.palette.alternate.main}>

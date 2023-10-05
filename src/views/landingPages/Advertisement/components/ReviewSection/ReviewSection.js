@@ -42,9 +42,6 @@ const ReviewSection = () => {
       >
         <Box data-aos={'fade-up'}>
 
-          <Grid container spacing={2}>
-
-          </Grid>
           <Typography
             sx={{
               textTransform: 'uppercase',
@@ -54,11 +51,33 @@ const ReviewSection = () => {
             color={'secondary'}
             align={'center'}
           >
-            the ultimate Performance tool
+            The new essential tool for engineers
           </Typography>
+
+
+
           <Typography variant={'h3'} gutterBottom align={'center'}>
             <Box fontWeight={700} component={'span'}>
-            Self-review & Peer-reviews
+            Daily Standups
+            </Box>
+          </Typography>
+          <Box
+            component={Typography}
+            variant={'h6'}
+            fontWeight={400}
+            align={'center'}
+            gutterBottom
+          >
+          Thinksy makes daily stand-ups a breeze by <strong>automatically compiling</strong> your progress and contributions.
+          No more scrambling to recall what you've accomplished since yesterday or worrying that you missed something.
+          With Thinksy, <strong>share key updates effortlessly</strong> and efficiently so you can spend less time repeating yourself
+          and more time moving forward.
+          </Box>
+
+
+          <Typography variant={'h3'} paddingTop={5} gutterBottom align={'center'}>
+            <Box fontWeight={700} component={'span'}>
+            Self-review
             </Box>
           </Typography>
           <Typography variant={'h6'} gutterBottom align={'center'}>
@@ -97,7 +116,7 @@ const ReviewSection = () => {
 
 
 
-          <Typography variant={'h3'} gutterBottom align={'center'}>
+          <Typography variant={'h3'} paddingTop={5} gutterBottom align={'center'}>
             <Box fontWeight={700} component={'span'}>
             Promotion Packets
             </Box>
@@ -125,29 +144,11 @@ const ReviewSection = () => {
                 align={'center'}
                 gutterBottom
               >
-                Save hours going back through your Jira, Github, Slack and other apps to find examples of your work.
-                Just ask Thinksy to look for skills demonstrated, release posts, complicated PRs and more -- all while hyperlinking all that work right into your review.
+                <strong>Save hours</strong> going back through your Jira, Github, Slack and other apps to find examples of your work.
+                Just ask Thinksy to look for <strong>skills demonstrated</strong>, release posts, complicated PRs and more -- all while <strong>hyperlinking all that work</strong> right into your review.
               </Box>
             </Grid>
           </Grid>
-
-          <Typography variant={'h3'} gutterBottom align={'center'}>
-            <Box fontWeight={700} component={'span'}>
-            Engineering Managers
-            </Box>
-          </Typography>
-          <Box
-            component={Typography}
-            variant={'h6'}
-            fontWeight={400}
-            align={'center'}
-            gutterBottom
-          >
-            Offload the tedious task of finding work examples, scanning Jira for projects, searching Slack for participation and more.
-            Let Thinksy collect the data for your engineers’ performance reviews and promotion packets,
-             so you can spend more time writing a thoughtful review.
-          </Box>
-
         </Box>
       </Container>
     </Box>
