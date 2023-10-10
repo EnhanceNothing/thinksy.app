@@ -9,6 +9,9 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import WebbeeLogo from 'svg/logos/Webbee';
 import paletteTypes from 'common/paletteTypes';
+import mixpanel from 'mixpanel-browser';
+
+mixpanel.init("eed12a268b55b342ce4b0044b9ae2814", { track_pageview: true, persistence: 'localStorage' });
 
 const Topbar = ({
   themeMode,
@@ -125,7 +128,7 @@ const Topbar = ({
           </IconButton>
         </Box>
         <Box sx={{ display: { xs: 'none', md: 'flex' } }} alignItems={'center'}>
-          {/* <Box>
+          <Box>
             <Link underline="none" component="a" href="/" color="textPrimary">
               Home
             </Link>
@@ -134,13 +137,75 @@ const Topbar = ({
             <Link
               underline="none"
               component="a"
-              href="/about"
+              href="#features"
               color="textPrimary"
+              onClick={(event) => {
+                event.preventDefault();
+                const targetElement = document.querySelector('#features');
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+                mixpanel.track('Clicked Features Link', {
+                  'Referrer': document.referrer !== '' ? document.referrer : 'Unknown'
+                })
+              }}
+            >
+              Features
+            </Link>
+          </Box>
+          <Box>
+            <Link
+              underline="none"
+              component="a"
+              href="#faq"
+              color="textPrimary"
+              onClick={(event) => {
+                event.preventDefault();
+                const targetElement = document.querySelector('#faq');
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+                mixpanel.track('Clicked FAQ Link', {
+                  'Referrer': document.referrer !== '' ? document.referrer : 'Unknown'
+                })
+              }}
+            >
+              FAQ
+            </Link>
+          </Box>
+          <Box marginX={2}>
+            <Link
+              underline="none"
+              component="a"
+              href="/#pricing"
+              color="textPrimary"
+              onClick={(event) => {
+                event.preventDefault();
+                const targetElement = document.querySelector('#pricing');
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+                mixpanel.track('Clicked Pricing Link', {
+                  'Referrer': document.referrer !== '' ? document.referrer : 'Unknown'
+                })
+              }}
+            >
+              Pricing
+            </Link>
+          </Box>
+          <Box>
+            <Link
+              underline="none"
+              component="a"
+              href="/#about"
+              color="textPrimary"
+              onClick={(event) => {
+                event.preventDefault();
+                const targetElement = document.querySelector('#about');
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+                mixpanel.track('Clicked About Link', {
+                  'Referrer': document.referrer !== '' ? document.referrer : 'Unknown'
+                })
+              }}
             >
               About
             </Link>
-          </Box> */}
-        </Box>        
+          </Box>
+        </Box>
       </Box>
     </Box>
   );

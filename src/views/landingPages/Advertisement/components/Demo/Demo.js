@@ -5,6 +5,7 @@ import {ReactComponent as UnderlineSVG} from './images/words-line.svg';
 import { Link } from '@mui/material';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
 import mixpanel from 'mixpanel-browser';
 
 mixpanel.init("eed12a268b55b342ce4b0044b9ae2814", { track_pageview: true, persistence: 'localStorage' });
@@ -69,7 +70,7 @@ const Demo = () => {
             // loop
         />
 
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px 0 0 0' }}>
+        {/* <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px 0 0 0' }}>
             <div style={{ paddingRight: '20px' }}>
                 <Typography color="textSecondary" align='center'>
                 Want to see more? Walk through a live <br /> demo with one of our co-founders
@@ -91,7 +92,35 @@ const Demo = () => {
                     Schedule a Thinksy demo
                 </Box>
             </Link>
-        </div>
+        </div> */}
+
+        <Grid container spacing={2} justifyContent="center" alignItems="center" marginTop={2}>
+            <Grid item>
+            <Box
+                component={Typography}
+                align={'center'}
+                color="textSecondary"
+            >
+                Want to see more? Walk through a live <br /> demo with one of our co-founders
+            </Box>
+            </Grid>
+            <Grid item>
+            <Link href="https://thinksy.pipedrive.com/scheduler/kW5wODT2/thinksy-demo" target="_blank" underline="none">
+                <Box
+                component={Button}
+                variant="contained"
+                color={theme.palette.primary.dark}
+                size="large"
+                type="submit"
+                style={{ minWidth: '230px', backgroundColor: theme.palette.secondary.main }}
+                // margin={1}
+                onClick={handleDemoClick}
+                >
+                Schedule a Thinksy demo
+                </Box>
+            </Link>
+            </Grid>
+        </Grid>
 
         </Box>
     );

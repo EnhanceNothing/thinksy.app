@@ -55,7 +55,7 @@ const Platforms = () => {
           align={'center'}
         >
           A summary of your work,
-            <Box component="span" color={theme.palette.secondary.main} sx={{ position: 'relative', display: 'inline-block' }}>
+            <Box component="em" color={theme.palette.secondary.main} sx={{ position: 'relative', display: 'inline-block' }}>
             &nbsp;instantly
             </Box>{" "}
         </Box>

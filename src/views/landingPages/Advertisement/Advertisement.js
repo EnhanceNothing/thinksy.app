@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 import Container from 'common/Container';
 import thumbnail from './images/infomercial.jpeg'
 import { alpha } from '@mui/material/styles';
+import { Link } from '@mui/material';
+
 
 import {
   Hero,
@@ -26,9 +28,12 @@ const Advertisement = ({ themeMode }) => {
   return (
     <Box>
       <Box bgcolor={theme.palette.alternate.main} position={'relative'}>
-        <Container position="relative" zIndex={2}>
-          <Hero />
-        </Container>
+
+        <div id="#home">
+          <Container position="relative" zIndex={2}>
+            <Hero />
+          </Container>
+        </div>
 
         <Box
           component={'svg'}
@@ -55,9 +60,12 @@ const Advertisement = ({ themeMode }) => {
       </Box>
 
       <Box bgcolor={theme.palette.background.paper} position={'relative'}>
-        <Container position="relative" zIndex={2}>
-          <Platforms />
-        </Container>
+
+        <div id="features">
+          <Container position="relative" zIndex={2}>
+            <Platforms />
+          </Container>
+        </div>
 
         <Box
           component={'svg'}
@@ -176,23 +184,29 @@ const Advertisement = ({ themeMode }) => {
           <Manager />
       </Container>
 
-      <Container>
-          <Faq />
-      </Container>
+      <div id="faq">
+        <Container>
+            <Faq />
+        </Container>
+      </div>
 
       <Box bgcolor={theme.palette.alternate.main}>
-          <Container>
-            <Pricing />
-          </Container>
+          <div id="pricing">
+            <Container>
+              <Pricing />
+            </Container>
+          </div>
       </Box>
 
       <Container>
         <Headline />
       </Container>
 
-      <Container paddingTop={'0 !important'}>
-        <Team />
-      </Container>
+      <div id="about">
+        <Container paddingTop={'0 !important'}>
+          <Team />
+        </Container>
+      </div>
     </Box>
   );
 };

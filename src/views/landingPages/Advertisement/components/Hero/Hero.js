@@ -36,8 +36,15 @@ const subject = "Gimme Thinksy!";
 const body = "Hey Calli, I'm interested in trying out Thinksy! Can we set up some time for a demo?";
 const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+
+const handleGetThinksyClick = () => {
+  mixpanel.track('Clicked Get Thinksy Button', {
+    'Referrer': referrer
+  })
+}
+
 const SlackButton = () => (
-  <a href="https://624xubbu4piovegru452zrewii0rlgyj.lambda-url.us-east-1.on.aws/" style={{alignItems:'center',color:'#fff',backgroundColor:'#4A154B',border:'0',borderRadius:'4px',display:'inline-flex',fontFamily:'Lato, sans-serif',fontSize:'16px',fontWeight:'600',height:'48px',justifyContent:'center',textDecoration:'none',width:'236px', marginTop:'5px'}}>
+  <a href="https://624xubbu4piovegru452zrewii0rlgyj.lambda-url.us-east-1.on.aws/" onClick={handleGetThinksyClick} style={{alignItems:'center',color:'#fff',backgroundColor:'#4A154B',border:'0',borderRadius:'4px',display:'inline-flex',fontFamily:'Lato, sans-serif',fontSize:'16px',fontWeight:'600',height:'48px',justifyContent:'center',textDecoration:'none',width:'236px', marginTop:'5px'}}>
     <svg xmlns="http://www.w3.org/2000/svg" style={{height:'20px',width:'20px',marginRight:'12px'}} viewBox="0 0 122.8 122.8">
       <path d="M25.8 77.6c0 7.1-5.8 12.9-12.9 12.9S0 84.7 0 77.6s5.8-12.9 12.9-12.9h12.9v12.9zm6.5 0c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9v32.3c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V77.6z" fill="#e01e5a"></path>
       <path d="M45.2 25.8c-7.1 0-12.9-5.8-12.9-12.9S38.1 0 45.2 0s12.9 5.8 12.9 12.9v12.9H45.2zm0 6.5c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H12.9C5.8 58.1 0 52.3 0 45.2s5.8-12.9 12.9-12.9h32.3z" fill="#36c5f0"></path>
@@ -96,45 +103,9 @@ const Hero = ({ themeMode = 'light' }) => {
       setSubmitting(false);
     },
   });
-
-  const handleDemoClick = () => {
-    mixpanel.track('Clicked Schedule Demo Button', {
-      'Referrer': referrer
-    })
-  };
-
-  const handleGetThinksyClick = () => {
-    mixpanel.track('Clicked Get Thinksy Button', {
-      'Referrer': referrer
-    })
-  };
+;
 
   const theme = useTheme();
-
-  const GridItemVideoBlock = () => {
-    return (
-      <Box maxHeight={500} position={'relative'}>
-        <Box
-        component={'video'}
-        maxHeight={500}
-        height={'100%'}
-        width={'100%'}
-        src={demoVideo}
-        alt="..."
-        loading="lazy"
-        boxShadow={4}
-        borderRadius={1.5}
-        sx={{
-          objectFit: 'cover',
-        }}
-        controls
-        autoPlay
-        muted
-        loop
-      />
-      </Box>
-    );
-  };
 
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -245,6 +216,8 @@ const Hero = ({ themeMode = 'light' }) => {
               component={Card}
               boxShadow={{ xs: 1, sm: 3 }}
               borderRadius={5}
+              marginLeft={{ xs: 2}}
+              marginTop={{ xs: 2}}
               height={'100%'}
               width={'100%'}
             >
@@ -272,34 +245,12 @@ const Hero = ({ themeMode = 'light' }) => {
                   </Box>
 
                   <div style={{ display: 'flex', alignItems: 'center', paddingBottom: '20px' }}>
-                    {/* <div>
-                      <img src={calendar} alt="calendar icon" style={{ paddingRight: '10px' }} />
-                    </div> */}
                     <div>
                       <Typography color="textSecondary" align='center'>
                       Discover effortless work <br /> summaries today
                       </Typography>
                     </div>
                   </div>
-
-                  {/* <Link href="https://thinksy.pipedrive.com/scheduler/kW5wODT2/thinksy-demo" target="_blank" underline="none">
-                    <Box
-                      component={Button}
-                      variant="contained"
-                      color={theme.palette.primary.dark}
-                      size="large"
-                      type="submit"
-                      style={{ minWidth: '230px', backgroundColor: theme.palette.secondary.main }}
-                      margin={1}
-                      onClick={handleDemoClick}
-                    >
-                      Schedule a Thinksy demo
-                    </Box>
-                </Link>
-
-                <Typography color="textSecondary">
-                  or
-                </Typography> */}
 
                 <SlackButton />
 

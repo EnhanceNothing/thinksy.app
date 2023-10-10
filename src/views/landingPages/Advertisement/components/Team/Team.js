@@ -225,6 +225,7 @@ const Team = () => {
             display="flex"
             flexDirection={'column'}
             justifyContent={'center'}
+            marginTop={5}
           >
             <Box
             display="flex"
