@@ -18,6 +18,7 @@ import {
   About as AboutView,
   ThankYou as ThankYouView,
   NotFound as NotFoundView,
+  Faq as FAQView,
 } from './views/supportingPages';
 
 const Routes = () => {
@@ -36,11 +37,11 @@ const Routes = () => {
       />
       <Route
         exact
-        path="/about"
+        path="/faq"
         element={((matchProps) => (
           <WithLayout
             {...matchProps}
-            component={AboutView}
+            component={FAQView}
             layout={MainLayout}
           />
         ))()}

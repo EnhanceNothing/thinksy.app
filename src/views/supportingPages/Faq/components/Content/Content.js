@@ -53,8 +53,16 @@ const FaqGroupItem = ({ title, items }) => {
               <Typography fontWeight={600}>{item.title}</Typography>
             </Box>
             <AccordionDetails>
-              <Typography color="text.secondary">{item.subtitle}</Typography>
-            </AccordionDetails>
+              <Typography color="text.secondary">
+                {item.subtitle.split('\n').map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
+              </Typography>
+           </AccordionDetails>
+
           </Box>
         ))}
       </Box>
@@ -72,64 +80,59 @@ const Content = () => {
     <Box>
       <Box marginBottom={6}>
         <FaqGroupItem
-          title={'Basics'}
+          title={'Sign up & Subscription'}
           items={[
             {
-              title: 'Can I purchase a gift certificate?',
+              title: 'What happens after I sign up for Thinksy?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                "The Thinksy free version is available immediately. For paid versions, after signing up for Thinksy you will receive a confirmation email with a link to schedule a quick 15 minute on-boarding call with one of our co-founders. During the on-boarding call we will share screens and walk you through the steps to add Thinksy to your Slack workspace, integrate your apps, and test your first Thinksy summary. You'll also gain access to the exclusive Thinksy support channel for on-going feedback loop.",
             },
             {
-              title: 'What is your return policy?',
+              title: 'Can I cancel anytime?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                "Yes, you can cancel anytime, there is no long term obligation. Thinksy is billed month to month so if you choose to cancel, your Thinksy account will be deactivated on the last day before your next billing period."
             },
             {
-              title: 'Do you sell gift cards?',
+              title: 'What is your money back guarantee?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                "If you are not satisfied with Thinksy, we will refund you for the amount you paid for Thinksy up to three (3) months. To help us learn & grow as a company we will request an exit interview so we can continually improve."
             },
             {
-              title: 'Can I change plans later on?',
+              title: 'What do I get with the Thinksy free version?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            },
-            {
-              title: 'Is this a subscription service?',
-              subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                "The Thinksy free version offers the following features:\n• One integration\n• Up to two weeks review period\n• Generate up to 10 reviews\n• No expiration date\n• 10% off your first three months of a Thinksy paid subscription"
             },
           ]}
         />
       </Box>
       <Box marginBottom={6}>
         <FaqGroupItem
-          title={'Account & settings'}
+          title={'Use & Features'}
           items={[
             {
-              title: 'Can I purchase a gift certificate?',
+              title: 'How do I use Thinksy?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                "After adding Thinksy to your Slack workspace, navigate to the Thinksy app on the lefthand sidebar\n\nType your command in the chatbox, \"Message Thinksy\"\nThere are two commands:\n\n`/thinksy settings`\nConnect your apps using OAuth\n\n`/thinksy review`\nSelect the date range, there is a 2 week limit on the free version\nSelect public Slack channels, optional\n\nClick \"Generate Review\"",
             },
             {
-              title: 'What is your return policy?',
+              title: 'What is the Thinksy support channel?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                'The Thinksy support channel is an exclusive Slack Connect channel for users to access immediate support, give feedback, chat with other Thinksy users and more. It is available on any paid version of Thinksy.',
             },
             {
-              title: 'Do you sell gift cards?',
+              title: 'Can I change the results I get from Thinksy?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                'At this time, custom prompts are only available to Enterprise customers. For Free, Standard and Premium plans, the results generated by Thinksy will not change unless the input data is updated.',
             },
             {
-              title: 'Can I change plans later on?',
+              title: 'How do I review a coworker?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                'To run reports on coworkers and other users, upgrade to Premium.',
             },
             {
-              title: 'Is this a subscription service?',
+              title: 'When will you add more integrations?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                'While there is no set schedule for new features or new integrations we are continually iterating and improving Thinksy and notify those on our mailing list of the latest updates as soon as they\'re available.',
             },
           ]}
         />
@@ -139,29 +142,9 @@ const Content = () => {
           title={'Security'}
           items={[
             {
-              title: 'Can I purchase a gift certificate?',
+              title: 'How do I know my data is secure with Thinksy?',
               subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            },
-            {
-              title: 'What is your return policy?',
-              subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            },
-            {
-              title: 'Do you sell gift cards?',
-              subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            },
-            {
-              title: 'Can I change plans later on?',
-              subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-            },
-            {
-              title: 'Is this a subscription service?',
-              subtitle:
-                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+                'We take the security of your data very seriously.  Please email our CTO for details on how we keep your data safe eden@thinksy.app',
             },
           ]}
         />

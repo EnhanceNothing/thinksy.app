@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 const Headline = () => {
   return (
     <Box>
-      <Typography
+      {/* <Typography
         sx={{
           textTransform: 'uppercase',
           fontWeight: 'medium',
@@ -15,7 +15,7 @@ const Headline = () => {
         align={'center'}
       >
         F.A.Q.
-      </Typography>
+      </Typography> */}
       <Box marginBottom={2}>
         <Typography
           variant="h2"
@@ -24,12 +24,12 @@ const Headline = () => {
             fontWeight: 700,
           }}
         >
-          Have a question?
+          Frequently Asked Questions
         </Typography>
       </Box>
       <Box>
         <Typography variant="h6" align={'center'} color={'textSecondary'}>
-          Search our FAQ for answers to anything you might ask.
+        For any inquiries or feedback, we’re here to help. If you can’t find the answer to your <br /> questions, please contact us directly and we’ll respond within 24 hours.
         </Typography>
       </Box>
     </Box>
