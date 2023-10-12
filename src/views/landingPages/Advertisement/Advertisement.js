@@ -7,7 +7,6 @@ import thumbnail from './images/infomercial.jpeg'
 import { alpha } from '@mui/material/styles';
 import { Link } from '@mui/material';
 
-
 import {
   Hero,
   Banner,
@@ -22,6 +21,10 @@ import {
   Manager
 } from './components';
 import { Man } from '@mui/icons-material';
+
+import mixpanel from 'mixpanel-browser';
+
+mixpanel.init("eed12a268b55b342ce4b0044b9ae2814", { track_pageview: true, persistence: 'localStorage' });
 
 const Advertisement = ({ themeMode }) => {
   const theme = useTheme();

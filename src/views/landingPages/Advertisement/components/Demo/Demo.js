@@ -8,8 +8,6 @@ import { alpha, useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import mixpanel from 'mixpanel-browser';
 
-mixpanel.init("eed12a268b55b342ce4b0044b9ae2814", { track_pageview: true, persistence: 'localStorage' });
-
 
 const Demo = () => {
     const theme = useTheme();

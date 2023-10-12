@@ -11,8 +11,6 @@ import WebbeeLogo from 'svg/logos/Webbee';
 import paletteTypes from 'common/paletteTypes';
 import mixpanel from 'mixpanel-browser';
 
-mixpanel.init("eed12a268b55b342ce4b0044b9ae2814", { track_pageview: true, persistence: 'localStorage' });
-
 
 const Topbar = ({
   themeMode,

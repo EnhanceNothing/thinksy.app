@@ -17,8 +17,6 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import ToggleButton from '@mui/material/ToggleButton';
 import mixpanel from 'mixpanel-browser';
 
-mixpanel.init("eed12a268b55b342ce4b0044b9ae2814", { track_pageview: true, persistence: 'localStorage' });
-
 const referrer = document.referrer !== '' ? document.referrer : 'Unknown';
 
 function sendEmail(tier) {

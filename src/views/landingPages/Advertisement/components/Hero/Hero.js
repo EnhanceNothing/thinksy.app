@@ -20,8 +20,6 @@ import axios from 'axios';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import mixpanel from 'mixpanel-browser';
 
-mixpanel.init("eed12a268b55b342ce4b0044b9ae2814", { track_pageview: true, persistence: 'localStorage' });
-
 const validationSchema = yup.object({
   email: yup
     .string('Enter your email')
